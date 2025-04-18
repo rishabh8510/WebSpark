@@ -9,7 +9,7 @@ const Header = () => (
   <header className="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-[#02060c] via-[#0d1d34] to-[#02060c] shadow-md">
     {/* Top Bar: Flags and Contact Info */}
     <div className="w-full px-4 py-2 border-b border-gray-800/50">
-      <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
+      <div className="max-w-screen-xl mx-auto flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
         {/* Country Flags */}
         <div className="flex flex-wrap justify-center lg:justify-start gap-4">
           <span className="text-white text-xs font-light flex items-center">
@@ -45,7 +45,7 @@ const Header = () => (
 
     {/* Main Nav: Logo, Links, Button */}
     <div className="w-full px-4 py-3">
-      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+      <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
         {/* Logo */}
         <div className="flex justify-center md:justify-start w-full md:w-auto">
           <img src={logo} alt="Logo" className="h-12" />
