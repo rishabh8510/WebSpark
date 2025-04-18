@@ -15,13 +15,13 @@ const Header = () => (
           <span className="text-white text-xs font-light flex items-center">
             <US title="United States" className="h-3 mr-2" /> USA
           </span>
-          <span className="text-white text-xs font-light flex items-center">
+          <span className="text-white text-xs font-light flex items-center uppercase">
             <CA title="Canada" className="h-3 mr-2" /> Canada
           </span>
           <span className="text-white text-xs font-light flex items-center">
-            <AU title="Australia" className="h-3 mr-2" /> Australia
+            <AU title="Australia" className="h-3 mr-2" /> Austrlia
           </span>
-          <span className="text-white text-xs font-light flex items-center">
+          <span className="text-white text-xs font-light flex items-center uppercase">
             <EU title="European Union" className="h-3 mr-2" /> Europe
           </span>
           <span className="text-white text-xs font-light flex items-center">
@@ -37,7 +37,7 @@ const Header = () => (
           </div>
           <div className="flex items-center gap-2">
             <FaPhone className="h-4 w-4" />
-            <a href="tel:+911234567890">+91 1234567890</a>
+            <a href="tel:+911234567890">+91 8965029288</a>
           </div>
         </div>
       </div>

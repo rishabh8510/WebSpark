@@ -138,12 +138,19 @@ const teamMembers = new Array(10).fill({
   });
 
 const Home = () => {
-    const images = [
-        "/Img.png",
-        "/Img.png",
-        "/Img.png",
-        "/Img.png",
-      ];
+  const cards = [
+    { img: "/1.jpg", title: "Mei Ling", desc: "AI & ANALYTICS MEET" },
+    { img: "/2.jpg", title: "Liam Anderson", desc: "INNOVATION SUMMIT 2024" },
+    { img: "/3.jpg", title: "Isabella Müller", desc: "DESIGN WEEK ABU DHABI" },
+    { img: "/4.jpg", title: "Hiroshi Tanaka", desc: "RIYADH FUTURE FORUM" },
+    { img: "/5.jpg", title: "Amara Patel", desc: "FUTURE TECH TALK" },
+    { img: "/6.jpg", title: "Enzo Moretti", desc: "INTERNATIONAL BIZ EXPO" },
+    { img: "/7.jpg", title: "Sophie Dubois", desc: "TECH FRONTIERS" },
+    { img: "/8.jpg", title: "Carlos Navarro", desc: "STARTUP CONCLAVE" },
+    { img: "/9.jpg", title: "Noura Al-Farsi", desc: "CLOUD EXPO EUROPE" },
+    { img: "/10.jpg", title: "Lukas Schneider", desc: "BRANDSTRATEGY LIVE" },
+    { img: "/11.jpg", title: "MR HAMIN", desc: "GITEX DUBAI EXPO" },
+  ];
     
       // Text animations
       const variants = {
@@ -268,7 +275,7 @@ const partners = [
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: false, amount: 0.3 }}
-            className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight"
+            className="text-3xl sm:text-5xl md:text-6xl lg:text-6xl  text-white leading-tight"
           >
             We Build Software
           </motion.h1>
@@ -277,7 +284,7 @@ const partners = [
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: false, amount: 0.3 }}
-            className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight"
+            className="text-3xl sm:text-5xl md:text-6xl lg:text-6xl  text-white leading-tight"
           >
             to Make Your Life &
           </motion.h1>
@@ -286,7 +293,7 @@ const partners = [
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: false, amount: 0.3 }}
-            className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight"
+            className="text-3xl sm:text-5xl md:text-6xl lg:text-6xl  text-white leading-tight"
           >
             Business Easy!
           </motion.h1>
@@ -298,11 +305,11 @@ const partners = [
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           viewport={{ once: false, amount: 0.3 }}
-          className="text-gray-300 mt-4 max-w-2xl mx-auto text-sm sm:text-base md:text-lg font-light px-2 sm:px-4"
+          className="text-gray-300 mt-4 max-w-2xl mx-auto text-sm sm:text-base md:text-lg font-light px-2 sm:px-4 lg:text-sm"
         >
-          Bluewebspark Technologies: Pioneering IT Software, AI, and Business Solutions
+          Bluewebspark Technologies: Pioneering IT Software, AI, and Business
           <br className="hidden sm:block" />
-          Founded on Thursday, February 19, 2015.
+          Solutions Founded on Thursday, February 19, 2015.
         </motion.p>
       </div>
     </main>
@@ -324,7 +331,7 @@ const partners = [
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: false, amount: 0.3 }}
-            className="text-2xl sm:text-3xl md:text-4xl font-bold leading-snug lg:pl-36"
+            className="text-2xl sm:text-3xl md:text-4xl font-semibold leading-snug lg:pl-36"
           >
             Built by{" "}
             <span className="bg-gradient-to-r from-[#007AFF] to-[#7AC8FF] bg-clip-text text-transparent">
@@ -339,7 +346,7 @@ const partners = [
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: false, amount: 0.3 }}
-            className="text-gray-400 mt-4 md:mt-6 text-sm md:text-base lg:pl-36"
+            className="text-gray-400 mt-4 md:mt-6 text-sm  lg:pl-36 "
           >
             Manish & Shekhar, both brothers, started Bluewebspark Technologies
             with a vision To Deliver IT Solutions.
@@ -425,7 +432,7 @@ const partners = [
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.6, ease: "easeInOut", delay: 0.1 }}
           viewport={{ once: false, amount: 0.3 }}
-          className="mt-4 text-2xl sm:text-3xl md:text-4xl font-bold text-white"
+          className="mt-4 text-2xl sm:text-3xl md:text-4xl font-semibold text-white"
         >
           <span className="bg-gradient-to-r from-[#007AFF] to-[#7AC8FF] bg-clip-text text-transparent">
             Software
@@ -508,7 +515,7 @@ const partners = [
             <div className="mb-4">
               <img src={item.icon} alt={item.title} className="w-8 h-8 object-contain filter invert" />
             </div>
-            <h3 className="text-white font-medium">{item.title}</h3>
+            <h3 className="text-white text-sm">{item.title}</h3>
           </motion.div>
         ))}
       </div>
@@ -516,14 +523,21 @@ const partners = [
 
     {/* ==================== next ================== */}
 
-    <div className="bg-[#0b0a14] text-white py-10 px-4 md:px-20 min-h-screen">
+    <div className="bg-[#010101] text-white py-10 px-4 md:px-20 min-h-screen">
+      <style>{`
+        @keyframes marquee {
+          0% { transform: translateX(0%); }
+          100% { transform: translateX(-50%); }
+        }
+      `}</style>
+
       <div className="text-center space-y-4">
         <motion.span
-          className="inline-block px-4 py-1 border border-[#3A4C6C] rounded-full text-xs tracking-widest bg-[#0D1B36]"
-          initial="hidden"
-          whileInView="visible"
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: false, amount: 0.6 }}
-          variants={variants.span}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="inline-block px-4 py-1 border border-[#3A4C6C] rounded-full text-xs tracking-widest bg-[#0D1B36]"
         >
           <span className="bg-gradient-to-r from-[#BFDFFF] via-[#339BFF] to-[#BFDFFF] bg-clip-text text-transparent">
             Decade Strong
@@ -531,66 +545,55 @@ const partners = [
         </motion.span>
 
         <motion.h1
-          className="text-3xl md:text-4xl"
-          initial="hidden"
-          whileInView="visible"
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: false, amount: 0.6 }}
-          variants={variants.h1}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          className="text-3xl md:text-5xl lg:text-4xl font-semibold"
         >
-          Celebrating <span className="bg-gradient-to-r from-[#007AFF] to-[#7AC8FF] bg-clip-text text-transparent">10 Years</span> of Growth and Success!
+          Celebrating{" "}
+          <span className="bg-gradient-to-r from-[#007AFF] to-[#7AC8FF] bg-clip-text text-transparent">
+            10 Years
+          </span>{" "}
+          of Growth and Success!
         </motion.h1>
 
         <motion.p
-          className="text-gray-400 max-w-3xl mx-auto text-sm md:text-base"
-          initial="hidden"
-          whileInView="visible"
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: false, amount: 0.6 }}
-          variants={variants.p}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+          className="text-gray-400 max-w-3xl mx-auto text-sm md:text-base lg:text-sm"
         >
           Proudly marking a decade of innovation, dedication, and success—thanks to our amazing team,
           clients, and partners who’ve fueled our journey from startup to standout.
         </motion.p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
-        {images.map((img, idx) => {
-          const direction = idx % 2 === 0 ? "up" : "down";
-
-          return (
-            <motion.div
+      {/* Auto-Marquee Slider Section */}
+      <div className="relative overflow-hidden mt-12">
+        <div
+          className="flex gap-6 whitespace-nowrap"
+          style={{
+            animation: "marquee 40s linear infinite",
+            width: "fit-content",
+          }}
+        >
+          {[...cards, ...cards].map((card, idx) => (
+            <div
               key={idx}
-              className="bg-[#141320] rounded-2xl p-4 shadow-lg"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: false, amount: 0.3 }}
-              variants={imageVariants(direction)}
+              className="bg-[#141320] rounded-xl p-3 shadow-md min-w-[220px] sm:min-w-[250px] transition-transform hover:scale-[1.03]"
             >
               <img
-                src={img}
-                alt={`MR HAMIN ${idx + 1}`}
-                className="rounded-xl mx-auto w-full h-auto"
+                src={card.img}
+                alt={card.title}
+                className="rounded-lg mx-auto w-full h-auto object-cover"
               />
-              <motion.h3
-                className="text-lg font-semibold mt-4 tracking-wide"
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.2 }}
-                viewport={{ once: false }}
-              >
-                MR HAMIN
-              </motion.h3>
-              <motion.p
-                className="text-sm text-gray-400 mt-1"
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.3 }}
-                viewport={{ once: false }}
-              >
-                GITEX DUBAI EXPO
-              </motion.p>
-            </motion.div>
-          );
-        })}
+              <h3 className="text-base  mt-3 uppercase">{card.title}</h3>
+              <p className="text-[10px] text-gray-400 mt-1">{card.desc}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
 
@@ -612,12 +615,12 @@ const partners = [
           10 Years. $1M+ in Projects. One Trusted Team.
         </motion.h2>
         <motion.p
-          className="text-xs sm:text-sm md:text-base mx-auto"
+          className="text-xs sm:text-sm md:text-base mx-auto lg:text-sm"
           variants={slideLeft}
         >
           We have a proven track record of delivering over 10 high-impact software solutions to prominent clients across top industries,
-          including Logistics, Real Estate, FMCG, Jewelry, and more, each valued at nearly $50K - $100K, over the past 10 years.
-          This demonstrates our expertise in managing and executing large-scale projects with exceptional results.
+          including Logistics, Real Estate,<br/> FMCG, Jewelry, and more, each valued at nearly $50K - $100K, over the past 10 years.
+          This demonstrates our expertise in managing and executing large-scale<br/> projects with exceptional results.
         </motion.p>
         <motion.button
           className="mt-4 sm:mt-6 bg-white text-blue-600 font-semibold px-4 sm:px-6 py-1 sm:py-2 rounded-full shadow-md hover:bg-blue-100 transition text-sm sm:text-base"
@@ -646,11 +649,11 @@ const partners = [
             </motion.h3>
 
             <motion.p
-              className="text-xs sm:text-sm text-gray-300 max-w-xl mb-6 sm:mb-8"
+              className="text-xs sm:text-sm text-gray-300 max-w-xl mb-6 sm:mb-8 lg:text-sm"
               variants={fadeUp}
             >
-              Empowering businesses through strategic partnerships with leading platforms like ZOHO, Shopify, ERPNext, and ODOO —
-              delivering integrated, scalable, and efficient software solutions tailored to your industry needs.
+              Empowering businesses through strategic partnerships with leading platforms like <br/>ZOHO, Shopify, ERPNext, and ODOO —
+              delivering integrated, scalable, and<br/> efficient software solutions tailored to your industry needs.
             </motion.p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
@@ -864,7 +867,7 @@ const partners = [
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ amount: 0.5 }}
-          className="text-sm md:text-base text-gray-300"
+          className="text-sm md:text-base text-gray-300 lg:text-sm"
         >
           Take a visual journey through 10 incredible years of growth,
           innovation, and milestones. Each moment captured reflects our passion,
@@ -891,7 +894,7 @@ const partners = [
           />
           <div className="absolute bottom-0 left-0 right-0 backdrop-blur-md bg-black/40 p-2">
             <h3 className="text-lg font-semibold mb-1">Where It All Began</h3>
-            <p className="text-sm text-gray-300">
+            <p className="text-xs text-gray-300">
               Our humble beginning in 2015 — a vision, a small team, and big
               dreams. This is the moment that sparked the Bluewebspark journey.
             </p>
@@ -915,7 +918,7 @@ const partners = [
           />
           <div className="absolute bottom-0 left-0 right-0 backdrop-blur-md bg-black/40 p-2">
             <h3 className="text-lg font-semibold mb-1">How Far We’ve Come</h3>
-            <p className="text-sm text-gray-300">
+            <p className="text-xs text-gray-300">
               From startup to success — now a thriving tech company with 10
               years of innovation, trusted clients, and a growing team shaping
               the future of software.
@@ -972,7 +975,7 @@ const partners = [
           className="mt-4 text-gray-400 max-w-2xl mx-auto text-sm"
         >
           Meet the brilliant minds driving innovation, excellence, and growth at
-          Bluewebspark—our dedicated team of experts committed to delivering impactful
+          Bluewebspark—our dedicated <br/>team of experts committed to delivering impactful
           solutions and exceeding client expectations every step of the way.
         </motion.p>
       </div>
@@ -1014,7 +1017,7 @@ const partners = [
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ amount: 0.5 }}
-          className="inline-block px-4 py-1 border border-[#3A4C6C] rounded-full text-xs tracking-widest bg-[#0D1B36]"
+          className="inline-block px-4 py-1 border border-[#3A4C6C] rounded-full text-xs tracking-widest bg-[#0D1B36] mb-5"
         >
           <span className="bg-gradient-to-r from-[#BFDFFF] via-[#339BFF] to-[#BFDFFF] bg-clip-text text-transparent">
             Decade Strong
@@ -1039,7 +1042,7 @@ const partners = [
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ amount: 0.5 }}
-          className="mt-3 text-sm sm:text-base text-gray-400 max-w-3xl mx-auto"
+          className="mt-3 text-sm sm:text-base text-gray-400 max-w-3xl mx-auto lg:text-sm"
         >
           Proudly marking a decade of innovation, dedication, and success—thanks to our amazing team, clients, and partners who’ve fueled our journey from startup to standout.
         </motion.p>

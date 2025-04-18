@@ -53,7 +53,7 @@ export default function Footer() {
             </div>
             <div className="flex items-center justify-center md:justify-start space-x-2">
               <FaPhoneAlt className="text-lg flex-shrink-0" />
-              <span>+91 1234567898</span>
+              <span>+91 8965029288</span>
             </div>
           </div>
 
