@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from "../assets/Logo.svg";
 import {
   FaMapMarkerAlt,
   FaEnvelope,
@@ -17,7 +18,7 @@ export default function Footer() {
         {/* Logo and Description */}
         <div className='md:mr-10'>
           <div className="flex items-center space-x-2">
-            <img src="/src/assets/Logo.svg" alt="Logo" className="h-16 max-w-full" />
+            <img src= {logo} alt="Logo" className="h-16 max-w-full" />
           </div>
           <p className="mt-4 text-gray-300">
             Bluewebspark Technologies is a professional software firm <br className="hidden xs:block"/>delivering rapid, reliable solutions with a focus on Innovation, <br className="hidden xs:block"/>Transparency, and Agility in every client interaction.

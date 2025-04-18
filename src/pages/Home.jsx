@@ -2,6 +2,7 @@ import React from "react";
 import { useRef, useEffect, useState } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { FaLinkedin, FaInstagram, FaGlobe } from "react-icons/fa";
+import img from "../assets/image.png";
 
 
 const solutions = [
@@ -51,7 +52,7 @@ const solutions = [
         <div className="flex flex-row justify-between items-center gap-4 flex-wrap">
           <div className="flex items-center gap-3 flex-1 min-w-[250px]">
             <img
-              src="src/assets/image.png"
+              src={ img }
               alt="software"
               className="rounded-md w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 object-cover"
             />
