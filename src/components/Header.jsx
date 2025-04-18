@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from "../assets/Logo.svg";
+import logo from "../assets/logo.png";
 import { IoIosMail } from "react-icons/io";
 import { FaPhone } from "react-icons/fa6";
 import { HiOutlineDownload } from "react-icons/hi";

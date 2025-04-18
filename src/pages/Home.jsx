@@ -2,6 +2,7 @@ import React from "react";
 import { useRef, useEffect, useState } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { FaLinkedin, FaInstagram, FaGlobe } from "react-icons/fa";
+import PhilosophyTimeline from "../components/PhilosophyTimeline";
 import img from "../assets/image.png";
 
 
@@ -200,28 +201,28 @@ const Home = () => {
 
 //   =============== philosophyTimeline =======================
 
-const steps = [
-    { title: "Discovery & Consultation", side: "right" },
-    { title: "Planning & Strategy", side: "left" },
-    { title: "Design & Development", side: "right" },
-    { title: "Testing & Quality Assurance", side: "left" },
-    { title: "Delivery & Support", side: "right" },
-  ];
+// const steps = [
+//     { title: "Discovery & Consultation", side: "right" },
+//     { title: "Planning & Strategy", side: "left" },
+//     { title: "Design & Development", side: "right" },
+//     { title: "Testing & Quality Assurance", side: "left" },
+//     { title: "Delivery & Support", side: "right" },
+//   ];
 
-  const [activeIndex, setActiveIndex] = useState(1); // Show first 2 cards
-  const [lineHeight, setLineHeight] = useState(0);
-  const dotRefs = useRef([]);
-  const timelineRef = useRef(null);
+//   const [activeIndex, setActiveIndex] = useState(1); // Show first 2 cards
+//   const [lineHeight, setLineHeight] = useState(0);
+//   const dotRefs = useRef([]);
+//   const timelineRef = useRef(null);
 
-  useEffect(() => {
-    if (dotRefs.current[activeIndex] && timelineRef.current) {
-      const containerTop = timelineRef.current.getBoundingClientRect().top;
-      const dotTop = dotRefs.current[activeIndex].getBoundingClientRect().top;
-      const offset =
-        dotTop - containerTop + dotRefs.current[activeIndex].offsetHeight / 2;
-      setLineHeight(offset);
-    }
-  }, [activeIndex]);
+//   useEffect(() => {
+//     if (dotRefs.current[activeIndex] && timelineRef.current) {
+//       const containerTop = timelineRef.current.getBoundingClientRect().top;
+//       const dotTop = dotRefs.current[activeIndex].getBoundingClientRect().top;
+//       const offset =
+//         dotTop - containerTop + dotRefs.current[activeIndex].offsetHeight / 2;
+//       setLineHeight(offset);
+//     }
+//   }, [activeIndex]);
 
 //   =================== AssociatePartner ===========================
 const partners = [
@@ -245,9 +246,9 @@ const partners = [
 
   return (
     <>
-  <div className="bg-[#0b0a14]">
+  <div className="bg-[#010101]">
   <main
-      className="relative w-full min-h-screen bg-cover bg-center bg-no-repeat pt-[160px] bg-[#0b0a14]"
+      className="relative w-full min-h-screen bg-cover bg-center bg-no-repeat pt-[160px] bg-[#010101]"
       style={{ backgroundImage: "url('./bg.jpg')" }}
     >
       {/* Dark Overlay */}
@@ -316,7 +317,7 @@ const partners = [
 
     {/* =============== next ====================== */}
 
-    <section className="w-full my-10 md:my-20 px-4 bg-[#0b0a14]">
+    <section className="w-full my-10 md:my-20 px-4 bg-[#010101]">
       <div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr] gap-8 md:gap-12">
         {/* Left Content */}
         <motion.div
@@ -412,7 +413,7 @@ const partners = [
 
         {/* =============== next ====================== */}
 
-        <section className="mt-12 md:mt-24 px-4 sm:px-6 lg:px-8 bg-[#0b0a14]">
+        <section className="mt-12 md:mt-24 px-4 sm:px-6 lg:px-8 bg-[#010101]">
       {/* Section Header */}
       <div className="text-center mb-8 md:mb-12">
         <motion.span
@@ -463,7 +464,7 @@ const partners = [
     {/* ================== next ================= */}
 
 
-    <div className="bg-[#0b0a14] text-white py-16 px-6 text-center">
+    <div className="bg-[#010101] text-white py-16 px-6 text-center">
       {/* Animated span */}
       <motion.div
         className="mb-4"
@@ -599,7 +600,7 @@ const partners = [
 
     {/* ================= next ============================== */}
 
-    <div className="bg-[#0A0614] text-white font-sans px-4 sm:px-8 md:px-16 py-8 sm:py-12">
+    <div className="bg-[#010101] text-white font-sans px-4 sm:px-8 md:px-16 py-8 sm:py-12 lg:mt-[-40px]">
       {/* Hero Section */}
       <motion.div
         className="bg-gradient-to-r from-[#021226] via-[#0066FF] to-[#021226] rounded-xl p-6 sm:p-8 md:p-12 max-w-7xl mx-auto text-center shadow-lg"
@@ -720,119 +721,13 @@ const partners = [
 
     {/* ============= next ====================== */}
 
-    <div className="bg-[#0B0A13] text-white py-12 md:py-16 px-4 sm:px-6 lg:px-8">
-      {/* Header */}
-      <div className="text-center mb-12 md:mb-16">
-        <motion.span
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: false, amount: 0.6 }}
-          transition={{ duration: 0.6 }}
-          className="inline-block px-4 py-1 border border-[#3A4C6C] rounded-full text-xs tracking-widest bg-[#0D1B36]"
-        >
-          <span className="bg-gradient-to-r from-[#BFDFFF] via-[#339BFF] to-[#BFDFFF] bg-clip-text text-transparent">
-            Decade Strong
-          </span>
-        </motion.span>
-
-        <motion.h2
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: false, amount: 0.6 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-3xl sm:text-4xl font-semibold mt-3"
-        >
-          Simply{" "}
-          <span className="bg-gradient-to-r from-[#007AFF] to-[#7AC8FF] bg-clip-text text-transparent">
-            Philosophy
-          </span>
-        </motion.h2>
-
-        <motion.p
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: false, amount: 0.6 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-gray-400 text-xs sm:text-sm max-w-2xl mx-auto mt-3 sm:mt-4"
-        >
-          Proudly marking a decade of innovation, dedication, and success—thanks
-          to our amazing team, clients, and partners who've fueled our journey
-          from startup to standout.
-        </motion.p>
-      </div>
-
-      {/* Timeline */}
-      <div className="relative" ref={timelineRef}>
-        {/* Vertical Line */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 sm:w-1">
-          <div className="h-full bg-gray-700 relative">
-            <div
-              className="absolute top-0 w-full bg-blue-500 transition-all duration-700"
-              style={{ height: `${lineHeight}px` }}
-            ></div>
-          </div>
-        </div>
-
-        <div className="space-y-16 sm:space-y-20 md:space-y-24 relative">
-          {steps.slice(0, activeIndex + 1).map((step, index) => (
-            <div key={index} className="relative h-16 sm:h-20">
-              {/* Step Box */}
-              <div
-                className={`absolute top-0 ${
-                  step.side === "left"
-                    ? "right-[calc(50%+40px)] sm:right-[calc(50%+60px)] md:right-[calc(50%+80px)]"
-                    : "left-[calc(50%+40px)] sm:left-[calc(50%+60px)] md:left-[calc(50%+80px)]"
-                } w-40 sm:w-48 md:w-56`}
-              >
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: false, amount: 0.6 }}
-                  transition={{ duration: 0.5, delay: index * 0.2 }}
-                  onClick={() => {
-                    if (activeIndex === index + 1) {
-                      // Collapse
-                      setActiveIndex(index);
-                    } else if (index + 1 < steps.length) {
-                      // Expand
-                      setActiveIndex(index + 1);
-                    }
-                  }}
-                  className={`${
-                    activeIndex === index
-                      ? "bg-[#202036] border-blue-500 shadow-xl"
-                      : "bg-[#161421] border-[#1f1d2b]"
-                  } p-3 sm:p-4 md:p-5 rounded-lg border shadow-lg cursor-pointer flex flex-col items-center justify-center`}
-                >
-                  <div className="bg-gradient-to-r from-[#007AFF] to-[#7AC8FF] w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center font-bold text-white text-sm sm:text-base md:text-lg">
-                    <img
-                      src="/exam.png"
-                      alt="Exam"
-                      className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 object-contain"
-                    />
-                  </div>
-                  <div className="text-white text-xs sm:text-sm font-medium mt-1 sm:mt-2 text-center">
-                    {step.title}
-                  </div>
-                </motion.div>
-              </div>
-
-              {/* Center Dot */}
-              <div
-                ref={(el) => (dotRefs.current[index] = el)}
-                className="absolute left-1/2 transform -translate-x-1/2 top-8 sm:top-10 w-3 h-3 sm:w-4 sm:h-4 bg-blue-500 rounded-full z-10"
-              ></div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
+<PhilosophyTimeline/>
 
 {/* ============== next ================ */}
 
 {/* ============== journey section ======================= */}
 
-<section className="bg-[#0b0a14] text-white py-16 px-4 md:px-10">
+<section className="bg-[#010101] text-white py-16 px-4 md:px-10">
       <div className="text-center max-w-3xl mx-auto mb-12">
         {/* Span Animation - from top */}
         <motion.span
@@ -930,7 +825,7 @@ const partners = [
 
     {/* ================ TeamShowCase ========================== */}
 
-    <div className="bg-[#0b0a14] text-white py-16 px-4">
+    <div className="bg-[#010101] text-white py-16 px-4">
       <style>{`
         @keyframes marquee {
           0% { transform: translateX(0%); }
@@ -1009,7 +904,7 @@ const partners = [
 
     {/* ================ AssociatePartner ========================= */}
 
-    <div className="bg-[#0b0a14] text-white py-16 px-16 sm:px-6 lg:px-12">
+    <div className="bg-[#010101] text-white py-16 px-16 sm:px-6 lg:px-12">
       {/* Header */}
       <div className="text-center mb-12 px-2">
         <motion.span
