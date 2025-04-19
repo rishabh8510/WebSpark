@@ -116,7 +116,7 @@ const PhilosophyTimeline = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-3xl sm:text-4xl font-semibold mt-3"
         >
-          Simply{" "}
+          Our Simply{" "}
           <span className="bg-gradient-to-r from-[#007AFF] to-[#7AC8FF] bg-clip-text text-transparent">
             Philosophy
           </span>
