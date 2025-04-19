@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -14,15 +14,16 @@ const TimelineCard = ({ title, side, index, onInView }) => {
   const controls = useAnimation();
   const dotControls = useAnimation();
   const [ref, inView] = useInView({
-    threshold: 0.3,
+    threshold: 0.5,
     triggerOnce: false,
   });
 
   useEffect(() => {
+    onInView(index, inView);
+
     if (inView) {
       controls.start("visible");
       dotControls.start({ scale: 1, opacity: 1 });
-      onInView(index);
     } else {
       controls.start("hidden");
       dotControls.start({ scale: 0, opacity: 0 });
@@ -45,10 +46,11 @@ const TimelineCard = ({ title, side, index, onInView }) => {
       className="relative h-24 sm:h-28 md:h-32"
     >
       <div
-        className={`absolute top-0 ${side === "left"
-          ? "right-[calc(50%+40px)] sm:right-[calc(50%+60px)] md:right-[calc(50%+80px)]"
-          : "left-[calc(50%+40px)] sm:left-[calc(50%+60px)] md:left-[calc(50%+80px)]"
-          } w-40 sm:w-48 md:w-56`}
+        className={`absolute top-0 ${
+          side === "left"
+            ? "right-[calc(50%+40px)] sm:right-[calc(50%+60px)] md:right-[calc(50%+80px)]"
+            : "left-[calc(50%+40px)] sm:left-[calc(50%+60px)] md:left-[calc(50%+80px)]"
+        } w-40 sm:w-48 md:w-56`}
       >
         <div className="bg-[#161421] p-3 sm:p-4 md:p-5 rounded-lg border border-[#1f1d2b] shadow-lg flex flex-col items-center justify-center">
           <div className="bg-gradient-to-r from-[#007AFF] to-[#7AC8FF] w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center">
@@ -74,28 +76,28 @@ const TimelineCard = ({ title, side, index, onInView }) => {
 };
 
 const PhilosophyTimeline = () => {
-  const [activeIndex, setActiveIndex] = useState(-1);
-  const [lineKey, setLineKey] = useState(0);
-  const pControls = useAnimation();
-  const [pRef, pInView] = useInView({
-    threshold: 0.3,
-    triggerOnce: false,
-  });
+  const [highestVisibleIndex, setHighestVisibleIndex] = useState(-1);
+  const lineControls = useAnimation();
 
-  useEffect(() => {
-    if (pInView) {
-      pControls.start("visible");
+  const handleCardInView = (index, inView) => {
+    if (inView) {
+      // Only update if this index is higher than current highest
+      if (index > highestVisibleIndex) {
+        setHighestVisibleIndex(index);
+        const newHeight = ((index + 1) / steps.length) * 100;
+        lineControls.start({ height: `${newHeight}%` });
+      }
     } else {
-      pControls.start("hidden");
+      // If the current highest index goes out of view
+      if (index === highestVisibleIndex) {
+        // Find the new highest visible index
+        const newHighest = Math.max(0, highestVisibleIndex - 1);
+        setHighestVisibleIndex(newHighest);
+        const newHeight = ((newHighest + 1) / steps.length) * 100;
+        lineControls.start({ height: `${newHeight}%` });
+      }
     }
-  }, [pInView]);
-
-  const handleCardInView = (index) => {
-    setActiveIndex(index);
-    setLineKey(prev => prev + 1);
   };
-
-  const fillHeight = ((activeIndex + 1) / steps.length) * 100;
 
   return (
     <div className="bg-[#010101] text-white py-12 md:py-16 px-4 sm:px-6 lg:px-8">
@@ -122,19 +124,10 @@ const PhilosophyTimeline = () => {
           </span>
         </motion.h2>
 
-        {/* Animated P Tag */}
         <motion.p
-          ref={pRef}
-          initial="hidden"
-          animate={pControls}
-          variants={{
-            hidden: { opacity: 0, y: 20 },
-            visible: {
-              opacity: 1,
-              y: 0,
-              transition: { duration: 0.6 },
-            },
-          }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
           className="text-gray-400 text-xs sm:text-sm max-w-2xl mx-auto mt-3 sm:mt-4"
         >
           Proudly marking a decade of innovation, dedication, and success—thanks
@@ -144,13 +137,14 @@ const PhilosophyTimeline = () => {
       </div>
 
       <div className="relative">
+        {/* Base center line */}
         <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 sm:w-1 bg-gray-700 z-0"></div>
 
+        {/* Animated fill line */}
         <motion.div
-          key={lineKey}
           className="absolute left-1/2 transform -translate-x-1/2 w-0.5 sm:w-1 bg-blue-500 z-10 origin-top"
           initial={{ height: 0 }}
-          animate={{ height: `${fillHeight}%` }}
+          animate={lineControls}
           transition={{ duration: 0.4 }}
         />
 
