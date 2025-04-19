@@ -505,7 +505,7 @@ const partners = [
         {industries.map((item, index) => (
           <motion.div
             key={index}
-            className="bg-[#0e0e1a] border border-gray-700 rounded-lg p-6 flex flex-col items-center"
+            className="bg-[#0e0e1a] border border-gray-700 rounded-lg p-6 flex flex-col items-center hover:bg-gradient-to-r from-[#007AFF] to-[#7AC8FF] "
             custom={index}
             initial="hidden"
             whileInView="visible"

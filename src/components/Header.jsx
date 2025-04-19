@@ -63,7 +63,7 @@ const Header = () => (
 
         {/* Brochure Button */}
         <div className="flex justify-center md:justify-end w-full md:w-auto">
-          <button className="bg-[#0066FF] text-white px-5 py-2 rounded text-sm font-light flex items-center hover:bg-blue-700 transition">
+          <button className="bg-[#0066FF] text-white px-5 py-2 rounded text-sm font-light flex items-center hover:bg-gradient-to-r from-[#007AFF] to-[#7AC8FF] transition">
             Brochure <HiOutlineDownload className="ml-2" />
           </button>
         </div>
