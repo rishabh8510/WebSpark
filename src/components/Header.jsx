@@ -18,7 +18,7 @@ const Header = () => (
           <span className="text-white text-xs font-light flex items-center uppercase">
             <CA title="Canada" className="h-3 mr-2" /> Canada
           </span>
-          <span className="text-white text-xs font-light flex items-center">
+          <span className="text-white text-xs font-light flex items-center uppercase">
             <AU title="Australia" className="h-3 mr-2" /> Austrelia
           </span>
           <span className="text-white text-xs font-light flex items-center uppercase">
