@@ -262,7 +262,7 @@ const partners = [
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: false, amount: 0.3 }}
-          className="bg-[#1A2C4E]/30 px-4 py-1.5 rounded-full text-[#0066FF] inline-block mb-4 md:mb-6 backdrop-blur-sm text-sm font-light border border-[#3A4C6C]"
+          className="bg-[#0D1B36] px-4 py-1.5 rounded-full text-[#0066FF] inline-block mb-4 md:mb-6 backdrop-blur-sm text-sm font-light border border-[#3A4C6C]"
         >
           <span className="bg-gradient-to-r from-[#BFDFFF] via-[#339BFF] to-[#BFDFFF] bg-clip-text text-transparent">
             Technology that Moves Your Business Forward
@@ -467,16 +467,19 @@ const partners = [
     <div className="bg-[#010101] text-white py-16 px-6 text-center">
       {/* Animated span */}
       <motion.div
-        className="mb-4"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false, amount: 0.5 }}
-        variants={textVariants.span}
-      >
-        <span className="text-sm border border-[#3A4C6C] px-3 py-1 rounded-full bg-gradient-to-r from-[#BFDFFF] via-[#339BFF] to-[#BFDFFF] bg-clip-text text-transparent">
-          Universal Solutions
-        </span>
-      </motion.div>
+  className="mb-4"
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: false, amount: 0.5 }}
+  variants={textVariants.span}
+>
+  <span className="text-sm border border-[#3A4C6C] px-3 py-1 rounded-full bg-[#0D1B36]">
+    <span className="bg-gradient-to-r from-[#BFDFFF] via-[#339BFF] to-[#BFDFFF] bg-clip-text text-transparent">
+      Universal Solutions
+    </span>
+  </span>
+</motion.div>
+
 
       {/* Animated h2 */}
       <motion.h2
