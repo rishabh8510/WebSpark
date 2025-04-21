@@ -20,7 +20,7 @@ export default function Footer() {
           <div className="flex items-center space-x-2">
             <img src= {logo} alt="Logo" className="h-16 max-w-full" />
           </div>
-          <p className="mt-4 text-gray-300">
+          <p className="mt-4 text-gray-400">
             Bluewebspark Technologies is a professional software firm <br className="hidden xs:block"/>delivering rapid, reliable solutions with a focus on Innovation, <br className="hidden xs:block"/>Transparency, and Agility in every client interaction.
           </p>
         </div>
@@ -29,11 +29,11 @@ export default function Footer() {
         <div className="md:text-right mt-8 md:mt-24">
           <ul className="flex flex-wrap justify-end gap-x-4 gap-y-2">
             <li><a href="#" className="font-bold">Quick Links</a></li>
-            <li><a href="#" className="hover:underline">About Us</a></li>
-            <li><a href="#" className="hover:underline">Our Services</a></li>
-            <li><a href="#" className="hover:underline">Our Blogs</a></li>
-            <li><a href="#" className="hover:underline">FAQ</a></li>
-            <li><a href="#" className="hover:underline">Contact Us</a></li>
+            <li><a href="#" className="text-gray-400 hover:text-blue-400">About Us</a></li>
+            <li><a href="#" className="text-gray-400 hover:text-blue-400">Our Services</a></li>
+            <li><a href="#" className="text-gray-400 hover:text-blue-400">Our Blogs</a></li>
+            <li><a href="#" className="text-gray-400 hover:text-blue-400">FAQ</a></li>
+            <li><a href="#" className="text-gray-400 hover:text-blue-400">Contact Us</a></li>
           </ul>
         </div>
       </div>

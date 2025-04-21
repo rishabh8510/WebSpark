@@ -306,7 +306,7 @@ const Home = () => {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.6 }}
               viewport={{ once: false, amount: 0.3 }}
-              className="text-gray-300 mt-4 max-w-2xl mx-auto text-sm sm:text-base md:text-lg font-light px-2 sm:px-4 lg:text-sm"
+              className="text-gray-400 mt-4 max-w-2xl mx-auto text-sm sm:text-base md:text-lg font-light px-2 sm:px-4 lg:text-sm"
             >
               Bluewebspark Technologies: Pioneering IT Software, AI, and Business
               <br className="hidden sm:block" />
@@ -315,7 +315,7 @@ const Home = () => {
           </div>
         </main>
 
-        {/* =============== next ====================== */}
+        {/* =============== Brother's ====================== */}
 
         <section className="w-full my-10 md:my-20 px-4 bg-[#010101]">
           <div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr] gap-8 md:gap-12">
@@ -350,7 +350,7 @@ const Home = () => {
                 className="text-gray-400 mt-4 md:mt-6 text-sm  lg:pl-36 "
               >
                 Manish & Shekhar, both brothers, started Bluewebspark Technologies
-                with a vision To Deliver IT Solutions.
+                with a vision To <br/>Deliver IT Solutions.
               </motion.p>
             </motion.div>
 
@@ -411,7 +411,7 @@ const Home = () => {
           </div>
         </section>
 
-        {/* =============== next ====================== */}
+        {/* =============== software solution ====================== */}
 
         <section className="mt-12 md:mt-24 px-4 sm:px-6 lg:px-8 bg-[#010101]">
           {/* Section Header */}
@@ -461,7 +461,7 @@ const Home = () => {
           </div>
         </section>
 
-        {/* ================== next ================= */}
+        {/* ================== industry ================= */}
 
 
         <div className="bg-[#010101] text-white py-16 px-6 text-center">
@@ -525,7 +525,7 @@ const Home = () => {
           </div>
         </div>
 
-        {/* ==================== next ================== */}
+        {/* ==================== Celebration ================== */}
 
         <div className="bg-[#010101] text-white py-10 px-4 md:px-20 min-h-screen">
           <style>{`
@@ -601,12 +601,12 @@ const Home = () => {
           </div>
         </div>
 
-        {/* ================= next ============================== */}
+        {/* ================= Our Partner ============================== */}
 
         <div className="bg-[#010101] text-white font-sans px-4 sm:px-8 md:px-16 py-8 sm:py-12 lg:mt-[-40px]">
           {/* Hero Section */}
           <motion.div
-            className="bg-gradient-to-r from-[#021226] via-[#0066FF] to-[#021226] rounded-xl p-6 sm:p-8 md:p-12 max-w-7xl mx-auto text-center shadow-lg"
+            className="bg-[linear-gradient(229deg,_rgba(0,0,0,1)_0%,_rgba(0,102,255,1)_53%,_rgba(0,0,0,1)_100%)] rounded-xl p-6 sm:p-8 md:p-12 max-w-7xl mx-auto text-center shadow-lg"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false, amount: 0.4 }}
@@ -627,7 +627,7 @@ const Home = () => {
               This demonstrates our expertise in managing and executing large-scale<br /> projects with exceptional results.
             </motion.p>
             <motion.button
-              className="mt-4 sm:mt-6 bg-white text-blue-600 font-semibold px-4 sm:px-6 py-1 sm:py-2 rounded-full shadow-md hover:bg-blue-100 transition text-sm sm:text-base"
+              className="mt-4 sm:mt-6 bg-white text-blue-600 font-semibold px-4 sm:px-6 py-1 sm:py-2 rounded-full shadow-md hover:bg-blue-100 transition text-sm sm:text-sm"
               variants={scaleIn}
             >
               Let's Discuss the Project
@@ -653,7 +653,7 @@ const Home = () => {
                 </motion.h3>
 
                 <motion.p
-                  className="text-xs sm:text-sm text-gray-300 max-w-xl mb-6 sm:mb-8 lg:text-sm"
+                  className="text-xs sm:text-sm text-gray-400 max-w-xl mb-6 sm:mb-8 lg:text-sm"
                   variants={fadeUp}
                 >
                   Empowering businesses through strategic partnerships with leading platforms like <br />ZOHO, Shopify, ERPNext, and ODOO —
@@ -722,7 +722,7 @@ const Home = () => {
           </div>
         </div>
 
-        {/* ============= next ====================== */}
+        {/* ============= philosopy ====================== */}
 
         <PhilosophyTimeline />
 
@@ -765,7 +765,7 @@ const Home = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ amount: 0.5 }}
-              className="text-sm md:text-base text-gray-300 lg:text-sm"
+              className="text-sm md:text-base text-gray-400 lg:text-sm"
             >
               Take a visual journey through 10 incredible years of growth,
               innovation, and milestones. Each moment captured reflects our passion,
@@ -792,7 +792,7 @@ const Home = () => {
               />
               <div className="absolute bottom-0 left-0 right-0 backdrop-blur-md bg-black/40 p-2">
                 <h3 className="text-lg font-semibold mb-1">Where It All Began</h3>
-                <p className="text-xs text-gray-300">
+                <p className="text-xs ">
                   Our humble beginning in 2015 — a vision, a small team, and big
                   dreams. This is the moment that sparked the Bluewebspark journey.
                 </p>
@@ -816,7 +816,7 @@ const Home = () => {
               />
               <div className="absolute bottom-0 left-0 right-0 backdrop-blur-md bg-black/40 p-2">
                 <h3 className="text-lg font-semibold mb-1">How Far We’ve Come</h3>
-                <p className="text-xs text-gray-300">
+                <p className="text-xs ">
                   From startup to success — now a thriving tech company with 10
                   years of innovation, trusted clients, and a growing team shaping
                   the future of software.
