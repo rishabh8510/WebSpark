@@ -59,10 +59,10 @@ const SolutionCard = ({ title, description }) => {
           />
           <div>
             <h3 className="font-semibold text-sm sm:text-base md:text-lg mb-1 text-white">{title}</h3>
-            <p className="text-xs text-white">{description}</p>
+            <p className="text-xs text-gray-400">{description}</p>
           </div>
         </div>
-        <button className="px-4 py-1.5 sm:px-5 sm:py-2 border border-blue-500 text-blue-500 text-xs sm:text-sm rounded mt-3 sm:mt-0 hover:bg-blue-500 hover:text-white transition">
+        <button className="px-4 py-1.5 sm:px-5 sm:py-2 border border-blue-500 text-blue-500 text-xs sm:text-sm rounded mt-3 sm:mt-0 hover:bg-gradient-to-r from-[#007AFF] to-[#7AC8FF] hover:text-white transition">
           View
         </button>
       </div>
@@ -70,7 +70,7 @@ const SolutionCard = ({ title, description }) => {
   );
 };
 
-//   ========================== new========================
+//   ========================== industry ========================
 
 const industries = [
   { icon: '/icons/logistics.png', title: "logistics" },
@@ -325,7 +325,7 @@ const Home = () => {
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: false, amount: 0.3 }}
-              className="w-full ml-2 md:ml-4 text-white text-center md:text-left border-t border-b border-r border-[#4B5E7A] rounded-tr-lg rounded-br-lg p-6 md:p-8 md:flex md:flex-col md:justify-center lg:h-[300px]"
+              className="w-full ml-2 md:ml-4 text-white  md:text-left border-t border-b border-r border-[#4B5E7A] rounded-tr-lg rounded-br-lg p-6 md:p-8 md:flex md:flex-col md:justify-center lg:h-[300px]"
             >
               <motion.h2
                 initial={{ opacity: 0, y: -20 }}
@@ -347,10 +347,10 @@ const Home = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
                 viewport={{ once: false, amount: 0.3 }}
-                className="text-gray-400 mt-4 md:mt-6 text-sm  lg:pl-36 "
+                className="max-w-[700px] text-gray-400 mt-4 md:mt-6 text-sm  lg:pl-36 "
               >
                 Manish & Shekhar, both brothers, started Bluewebspark Technologies
-                with a vision To <br/>Deliver IT Solutions.
+                with a vision To Deliver IT Solutions.
               </motion.p>
             </motion.div>
 
@@ -446,7 +446,7 @@ const Home = () => {
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.6, ease: "easeInOut", delay: 0.2 }}
               viewport={{ once: false, amount: 0.3 }}
-              className="mt-3 md:mt-4 text-gray-400 max-w-2xl mx-auto text-xs sm:text-sm"
+              className="mt-3 md:mt-4 text-gray-400 max-w-[740px] mx-auto text-xs sm:text-sm"
             >
               Empowering businesses with innovative, scalable, and user-friendly software solutions designed to streamline
               operations, boost productivity, and drive digital transformation across various industries and operations.
@@ -494,7 +494,7 @@ const Home = () => {
 
           {/* Animated p */}
           <motion.p
-            className="max-w-2xl mx-auto text-gray-400 text-sm mb-10"
+            className="max-w-[810px] mx-auto text-gray-400 text-sm mb-10"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false, amount: 0.5 }}
@@ -567,7 +567,7 @@ const Home = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: false, amount: 0.6 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-              className="text-gray-400 max-w-3xl mx-auto text-sm md:text-base lg:text-sm"
+              className="text-gray-400  mx-auto text-sm md:text-base lg:text-sm"
             >
               Proudly marking a decade of innovation, dedication, and success—thanks to our amazing team,
               clients, and partners who’ve fueled our journey from startup to standout.
@@ -619,12 +619,12 @@ const Home = () => {
               10 Years. $1M+ in Projects. One Trusted Team.
             </motion.h2>
             <motion.p
-              className="text-xs sm:text-sm md:text-base mx-auto lg:text-sm"
+              className="text-xs sm:text-sm md:text-base mx-auto lg:text-sm lg:w-[1000px]"
               variants={slideLeft}
             >
               We have a proven track record of delivering over 10 high-impact software solutions to prominent clients across top industries,
-              including Logistics, Real Estate,<br /> FMCG, Jewelry, and more, each valued at nearly $50K - $100K, over the past 10 years.
-              This demonstrates our expertise in managing and executing large-scale<br /> projects with exceptional results.
+              including Logistics, Real Estate, FMCG, Jewelry, and more, each valued at nearly $50K - $100K, over the past 10 years.
+              This demonstrates our expertise in managing and executing large-scale projects with exceptional results.
             </motion.p>
             <motion.button
               className="mt-4 sm:mt-6 bg-white text-blue-600 font-semibold px-4 sm:px-6 py-1 sm:py-2 rounded-full shadow-md hover:bg-blue-100 transition text-sm sm:text-sm"
@@ -656,8 +656,8 @@ const Home = () => {
                   className="text-xs sm:text-sm text-gray-400 max-w-xl mb-6 sm:mb-8 lg:text-sm"
                   variants={fadeUp}
                 >
-                  Empowering businesses through strategic partnerships with leading platforms like <br />ZOHO, Shopify, ERPNext, and ODOO —
-                  delivering integrated, scalable, and<br /> efficient software solutions tailored to your industry needs.
+                  Empowering businesses through strategic partnerships with leading platforms like ZOHO, Shopify, ERPNext, and ODOO —
+                  delivering integrated, scalable, and efficient software solutions tailored to your industry needs.
                 </motion.p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
@@ -765,7 +765,7 @@ const Home = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ amount: 0.5 }}
-              className="text-sm md:text-base text-gray-400 lg:text-sm"
+              className="text-sm md:text-base text-gray-400 lg:text-sm "
             >
               Take a visual journey through 10 incredible years of growth,
               innovation, and milestones. Each moment captured reflects our passion,
@@ -870,10 +870,10 @@ const Home = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ amount: 0.5 }}
-              className="mt-4 text-gray-400 max-w-2xl mx-auto text-sm"
+              className="mt-4 text-gray-400 max-w-2xl mx-auto text-sm lg:w-[650px]"
             >
               Meet the brilliant minds driving innovation, excellence, and growth at
-              Bluewebspark—our dedicated <br />team of experts committed to delivering impactful
+              Bluewebspark - our dedicated team of experts committed to delivering impactful
               solutions and exceeding client expectations every step of the way.
             </motion.p>
           </div>
@@ -930,9 +930,9 @@ const Home = () => {
               className="text-2xl sm:text-3xl md:text-4xl font-semibold leading-tight"
             >
               <span className="bg-gradient-to-r from-[#007AFF] to-[#7AC8FF] bg-clip-text text-transparent">
-                Bluewebspark
+                Bluewebspark’s
               </span>
-              <span className="text-white">’s Associate Partners</span>
+              <span className="text-white"> Associate Partners</span>
             </motion.h2>
 
             <motion.p
@@ -940,7 +940,7 @@ const Home = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ amount: 0.5 }}
-              className="mt-3 text-sm sm:text-base text-gray-400 max-w-3xl mx-auto lg:text-sm"
+              className="mt-3 text-sm sm:text-base text-gray-400 mx-auto lg:text-sm"
             >
               Proudly marking a decade of innovation, dedication, and success—thanks to our amazing team, clients, and partners who’ve fueled our journey from startup to standout.
             </motion.p>
@@ -973,6 +973,8 @@ const Home = () => {
           className="max-h-full max-w-[80%] object-contain"
         />
       </div>
+
+      
 
       {/* Social Icons */}
       <div className="flex justify-center items-center gap-4 text-lg text-white flex-wrap">

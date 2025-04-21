@@ -128,7 +128,7 @@ const PhilosophyTimeline = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-gray-400 text-xs sm:text-sm max-w-2xl mx-auto mt-3 sm:mt-4"
+          className="text-gray-400 text-xs sm:text-sm  mx-auto mt-3 sm:mt-4"
         >
           Proudly marking a decade of innovation, dedication, and success—thanks
           to our amazing team, clients, and partners who've fueled our journey

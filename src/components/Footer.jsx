@@ -63,7 +63,7 @@ export default function Footer() {
             <a href="#" aria-label="Facebook" className="bg-blue-500 text-white p-2 rounded-full   hover:bg-blue-600 transition">
   <FaFacebookF />
 </a>
-<a href="#" aria-label="LinkedIn" className="bg-blue-500 text-white p-2 rounded-full   hover:bg-blue-600 transition">
+<a href="https://www.linkedin.com/company/bluewebsparktechnologies/posts/?feedView=all" aria-label="LinkedIn" target='blank' className="bg-blue-500 text-white p-2 rounded-full   hover:bg-blue-600 transition">
   <FaLinkedinIn />
 </a>
 <a href="#" aria-label="YouTube" className="bg-red-500 text-white p-2 rounded-full   hover:bg-red-800 transition">
