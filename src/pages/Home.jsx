@@ -136,9 +136,9 @@ const textVariants = {
 
 const teamMembers = new Array(10).fill(
   {
-    name: "John Doe",
-    role: "UI/UX Designer",
-    image: "/Profile.avif",
+    name: "Manish Shukla",
+    role: "Co-Founder & Director",
+    image: "/ceo.jpg",
   }
 );
 
@@ -606,7 +606,7 @@ const Home = () => {
 
         {/* ================= Our Partner ============================== */}
 
-        <div className="bg-[#010101] text-white font-sans px-4 sm:px-8 md:px-16 py-8 sm:py-12 lg:mt-[-40px]">
+        <div className="bg-[#010101] text-white font-sans px-4 sm:px-8 md:px-16 py-8 sm:py-12 mt-[-90px]">
           {/* Hero Section */}
           <motion.div
             className="bg-[linear-gradient(229deg,_rgba(0,0,0,1)_0%,_rgba(0,102,255,1)_53%,_rgba(0,0,0,1)_100%)] rounded-xl p-6 sm:p-8 md:p-12 max-w-7xl mx-auto text-center shadow-lg"
