@@ -10,45 +10,45 @@ const mobileMenuLinks = [
     title: "Software Solution",
     id: "software",
     subItems: [
-      { label: "Web Development", href: "/web-development" },
-      { label: "Mobile Apps", href: "/mobile-apps" },
-      { label: "Custom Software", href: "/custom-software" }
+      { label: "Web Development", href: "#" },
+      { label: "Mobile Apps", href: "#" },
+      { label: "Custom Software", href: "#" }
     ]
   },
   {
     title: "AI Solution",
     id: "ai",
     subItems: [
-      { label: "Machine Learning", href: "/machine-learning" },
-      { label: "Computer Vision", href: "/computer-vision" },
-      { label: "NLP Solutions", href: "/nlp" }
+      { label: "Machine Learning", href: "#" },
+      { label: "Computer Vision", href: "#" },
+      { label: "NLP Solutions", href: "#" }
     ]
   },
   {
     title: "BPO Services",
     id: "bpo",
     subItems: [
-      { label: "Customer Support", href: "/customer-support" },
-      { label: "Back Office", href: "/back-office" },
-      { label: "Data Entry", href: "/data-entry" }
+      { label: "Customer Support", href: "#" },
+      { label: "Back Office", href: "#" },
+      { label: "Data Entry", href: "#" }
     ]
   },
   {
     title: "Solution For Industry",
     id: "industry",
     subItems: [
-      { label: "Healthcare", href: "/industry/healthcare" },
-      { label: "Retail", href: "/industry/retail" },
-      { label: "Education", href: "/industry/education" }
+      { label: "Healthcare", href: "#" },
+      { label: "Retail", href: "#" },
+      { label: "Education", href: "#" }
     ]
   },
   {
     title: "Delivered Solutions",
     id: "delivered",
     subItems: [
-      { label: "Case Studies", href: "/case-studies" },
-      { label: "Client Success", href: "/client-success" },
-      { label: "Portfolio", href: "/portfolio" }
+      { label: "Case Studies", href: "#" },
+      { label: "Client Success", href: "#" },
+      { label: "Portfolio", href: "#" }
     ]
   },
   {
