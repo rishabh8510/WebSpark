@@ -4,28 +4,30 @@ import { motion, useInView, useAnimation } from "framer-motion";
 import { FaLinkedin, FaInstagram, FaGlobe } from "react-icons/fa";
 import PhilosophyTimeline from "../components/PhilosophyTimeline";
 import img from "../assets/image.png";
+import BentoGridCard from "../components/BentoGridCard";
+
 
 
 const solutions = [
   {
     title: "Transport & Logistic Management Software",
-    description: "Streamline Operations, Optimize Deliveries, and Drive Efficiency",
+    description: "Streamlining operations and optimizing efficiency in logistics management.",
   },
   {
     title: "Inventory POS Solution",
-    description: "Streamline Operations, Optimize Deliveries, and Drive Efficiency",
+    description: "Efficient inventory tracking and seamless point-of-sale management system.",
   },
   {
     title: "Ecommerce Solution",
-    description: "Streamline Operations, Optimize Deliveries, and Drive Efficiency",
+    description: "Comprehensive eCommerce platform for seamless shopping and management.",
   },
   {
     title: "Warehouse Management Software",
-    description: "Streamline Operations, Optimize Deliveries, and Drive Efficiency",
+    description: "Optimizing inventory flow and enhancing warehouse operational efficiency.",
   },
   {
     title: "EdTech Solution & School Management Software",
-    description: "Streamline Operations, Optimize Deliveries, and Drive Efficiency",
+    description: "Empowering education with streamlined management and digital learning tools.",
   },
 ];
 
@@ -73,7 +75,7 @@ const SolutionCard = ({ title, description }) => {
 //   ========================== industry ========================
 
 const industries = [
-  { icon: '/icons/logistics.png', title: "logistics" },
+  { icon: '/icons/logistics.png', title: "Logistics" },
   { icon: '/icons/jewellery.png', title: "Jewellery" },
   { icon: '/icons/budget.png', title: "Finance & Banking" },
   { icon: '/icons/dish.png', title: "FMCG" },
@@ -132,11 +134,13 @@ const textVariants = {
 
 //   =================== TeamShowCase==================
 
-const teamMembers = new Array(10).fill({
-  name: "John Doe",
-  role: "UI/UX Designer",
-  image: "/Profile.avif",
-});
+const teamMembers = new Array(10).fill(
+  {
+    name: "John Doe",
+    role: "UI/UX Designer",
+    image: "/Profile.avif",
+  }
+);
 
 const Home = () => {
   const cards = [
@@ -236,7 +240,7 @@ const Home = () => {
     },
     {
       name: "Iventurs",
-      logo: "/Inventurs.png",
+      logo: "/Kenowella.jpg",
     },
     {
       name: "Trucking Techs",
@@ -248,14 +252,14 @@ const Home = () => {
     <>
       <div className="bg-[#010101]">
         <main
-          className="relative w-full min-h-screen bg-cover bg-center bg-no-repeat pt-[160px] bg-[#010101]"
-          style={{ backgroundImage: "url('./bg.jpg')" }}
+          className="relative w-full bg-cover bg-center bg-no-repeat bg-[#010101] pt-30 sm:pt-28 lg:pt-[200px] lg:mb-[150px] pb-10 sm:pb-14"
+          style={{ backgroundImage: "url('/bg.jpg')" }} // Make sure this image is in /public
         >
           {/* Dark Overlay */}
           <div className="absolute inset-0 bg-black/60 z-0"></div>
 
           {/* Main Content */}
-          <div className="relative z-20 px-4 text-center flex flex-col items-center justify-center min-h-[calc(100vh-160px)] pb-10">
+          <div className="relative z-20 px-4 text-center flex flex-col items-center justify-center">
             {/* Badge */}
             <motion.div
               initial={{ y: -50, opacity: 0 }}
@@ -276,27 +280,27 @@ const Home = () => {
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: false, amount: 0.3 }}
-                className="text-3xl sm:text-5xl md:text-6xl lg:text-6xl  text-white leading-tight"
+                className="text-3xl sm:text-5xl md:text-6xl text-white leading-tight"
               >
-                We Build Software
+                We Build AI Software & Apps
               </motion.h1>
               <motion.h1
                 initial={{ x: 100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 viewport={{ once: false, amount: 0.3 }}
-                className="text-3xl sm:text-5xl md:text-6xl lg:text-6xl  text-white leading-tight"
+                className="text-3xl sm:text-5xl md:text-6xl text-white leading-tight"
               >
-                to Make Your Life &
+                to Simplify Your Daily
               </motion.h1>
               <motion.h1
                 initial={{ x: -100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
                 viewport={{ once: false, amount: 0.3 }}
-                className="text-3xl sm:text-5xl md:text-6xl lg:text-6xl  text-white leading-tight"
+                className="text-3xl sm:text-5xl md:text-6xl text-white leading-tight"
               >
-                Business Easy!
+                Hustle and Business
               </motion.h1>
             </div>
 
@@ -306,7 +310,7 @@ const Home = () => {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.6 }}
               viewport={{ once: false, amount: 0.3 }}
-              className="text-gray-400 mt-4 max-w-2xl mx-auto text-sm sm:text-base md:text-lg font-light px-2 sm:px-4 lg:text-sm"
+              className="text-gray-400 mt-4 max-w-2xl mx-auto text-sm sm:text-sm md:text-lg font-light px-2 sm:px-4 lg:text-sm"
             >
               Bluewebspark Technologies: Pioneering IT Software, AI, and Business
               <br className="hidden sm:block" />
@@ -314,6 +318,7 @@ const Home = () => {
             </motion.p>
           </div>
         </main>
+
 
         {/* =============== Brother's ====================== */}
 
@@ -365,7 +370,7 @@ const Home = () => {
                 className="relative bg-cover bg-center rounded-xl aspect-square min-w-[160px] flex-1 max-w-[220px] overflow-hidden"
                 style={{
                   backgroundImage:
-                    "url('https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?auto=format&fit=crop&w=800&q=80')",
+                    "url('./manishsir.jpg')",
                 }}
               >
                 <motion.div
@@ -391,7 +396,7 @@ const Home = () => {
                 className="relative bg-cover bg-center rounded-xl aspect-square min-w-[160px] flex-1 max-w-[220px] overflow-hidden"
                 style={{
                   backgroundImage:
-                    "url('https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=800&q=80')",
+                    "url('./shekhar.png')",
                 }}
               >
                 <motion.div
@@ -446,10 +451,9 @@ const Home = () => {
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.6, ease: "easeInOut", delay: 0.2 }}
               viewport={{ once: false, amount: 0.3 }}
-              className="mt-3 md:mt-4 text-gray-400 max-w-[740px] mx-auto text-xs sm:text-sm"
+              className="mt-3 md:mt-4 text-gray-400 max-w-[740px] mx-auto text-sm sm:text-sm"
             >
-              Empowering businesses with innovative, scalable, and user-friendly software solutions designed to streamline
-              operations, boost productivity, and drive digital transformation across various industries and operations.
+              Empowering businesses with innovative, scalable, and user-friendly software solutions, crafted to streamline operations, enhance productivity, optimize performance, and drive digital transformation across diverse industries and sectors
             </motion.p>
           </div>
 
@@ -500,11 +504,11 @@ const Home = () => {
             viewport={{ once: false, amount: 0.5 }}
             variants={textVariants.p}
           >
-            We deliver tailored software solutions for every industry—enhancing productivity, streamlining operations, and driving growth with innovative, reliable, and scalable technology built to meet your unique business needs.
+            We deliver custom software solutions for every industry, enhancing productivity, streamlining operations, and driving growth with innovative, reliable, and scalable technology, meticulously crafted to meet your unique business requirements.
           </motion.p>
 
           {/* Grid of industry cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
             {industries.map((item, index) => (
               <motion.div
                 key={index}
@@ -569,8 +573,7 @@ const Home = () => {
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
               className="text-gray-400  mx-auto text-sm md:text-base lg:text-sm"
             >
-              Proudly marking a decade of innovation, dedication, and success—thanks to our amazing team,
-              clients, and partners who’ve fueled our journey from startup to standout.
+              Proudly celebrating a decade of innovation, dedication, and success - thanks to our exceptional team, clients, and partners who have fueled our journey from startup to industry leader.
             </motion.p>
           </div>
 
@@ -622,9 +625,7 @@ const Home = () => {
               className="text-xs sm:text-sm md:text-base mx-auto lg:text-sm lg:w-[1000px]"
               variants={slideLeft}
             >
-              We have a proven track record of delivering over 10 high-impact software solutions to prominent clients across top industries,
-              including Logistics, Real Estate, FMCG, Jewelry, and more, each valued at nearly $50K - $100K, over the past 10 years.
-              This demonstrates our expertise in managing and executing large-scale projects with exceptional results.
+              We have a proven track record of delivering over 10 high-impact software solutions to prominent clients across leading industries, including Logistics, Real Estate, FMCG, Jewellery, and more, each valued between $50K and $100K over the past decade. This underscores our expertise in managing and executing large-scale projects with exceptional results.
             </motion.p>
             <motion.button
               className="mt-4 sm:mt-6 bg-white text-blue-600 font-semibold px-4 sm:px-6 py-1 sm:py-2 rounded-full shadow-md hover:bg-blue-100 transition text-sm sm:text-sm"
@@ -656,7 +657,7 @@ const Home = () => {
                   className="text-xs sm:text-sm text-gray-400 max-w-xl mb-6 sm:mb-8 lg:text-sm"
                   variants={fadeUp}
                 >
-                  Empowering businesses through strategic partnerships with leading platforms like ZOHO, Shopify, ERPNext, and ODOO —
+                  Empowering businesses through strategic partnerships with leading platforms like ZOHO, Shopify, ERPNext, and ODOO -
                   delivering integrated, scalable, and efficient software solutions tailored to your industry needs.
                 </motion.p>
 
@@ -774,56 +775,9 @@ const Home = () => {
           </div>
 
           {/* Cards Row */}
-          <div className="flex flex-col md:flex-row justify-center items-center gap-6">
-            {/* Left Card - from left */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ amount: 0.5 }}
-              className="relative rounded-lg overflow-hidden group shadow-lg w-full max-w-xl"
-            >
-              <motion.img
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-                src="https://images.unsplash.com/photo-1557804506-669a67965ba0"
-                alt="Team in 2015"
-                className="w-full h-72 object-cover"
-              />
-              <div className="absolute bottom-0 left-0 right-0 backdrop-blur-md bg-black/40 p-2">
-                <h3 className="text-lg font-semibold mb-1">Where It All Began</h3>
-                <p className="text-xs ">
-                  Our humble beginning in 2015 — a vision, a small team, and big
-                  dreams. This is the moment that sparked the Bluewebspark journey.
-                </p>
-              </div>
-            </motion.div>
+<BentoGridCard/>
 
-            {/* Right Card - from right */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ amount: 0.5 }}
-              className="relative rounded-lg overflow-hidden group shadow-lg w-full max-w-xl"
-            >
-              <motion.img
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-                src="https://images.unsplash.com/photo-1557804506-669a67965ba0"
-                alt="Modern team"
-                className="w-full h-72 object-cover"
-              />
-              <div className="absolute bottom-0 left-0 right-0 backdrop-blur-md bg-black/40 p-2">
-                <h3 className="text-lg font-semibold mb-1">How Far We’ve Come</h3>
-                <p className="text-xs ">
-                  From startup to success — now a thriving tech company with 10
-                  years of innovation, trusted clients, and a growing team shaping
-                  the future of software.
-                </p>
-              </div>
-            </motion.div>
-          </div>
+
         </section>
 
         {/* ================ TeamShowCase ========================== */}
@@ -872,9 +826,7 @@ const Home = () => {
               viewport={{ amount: 0.5 }}
               className="mt-4 text-gray-400 max-w-2xl mx-auto text-sm lg:w-[650px]"
             >
-              Meet the brilliant minds driving innovation, excellence, and growth at
-              Bluewebspark - our dedicated team of experts committed to delivering impactful
-              solutions and exceeding client expectations every step of the way.
+              Meet the brilliant minds driving innovation, excellence, and growth at Bluewebspark - our dedicated team of experts committed to delivering impactful solutions, fostering creativity, and exceeding client expectations at every step.
             </motion.p>
           </div>
 
@@ -906,8 +858,7 @@ const Home = () => {
         </div>
 
         {/* ================ AssociatePartner ========================= */}
-
-        <div className="bg-[#010101] text-white py-16 px-16 sm:px-6 lg:px-12">
+        <div className="bg-[#010101] text-white py-16 px-4 sm:px-6 lg:px-12">
           {/* Header */}
           <div className="text-center mb-12 px-2">
             <motion.span
@@ -942,65 +893,46 @@ const Home = () => {
               viewport={{ amount: 0.5 }}
               className="mt-3 text-sm sm:text-base text-gray-400 mx-auto lg:text-sm"
             >
-              Proudly marking a decade of innovation, dedication, and success—thanks to our amazing team, clients, and partners who’ve fueled our journey from startup to standout.
+              Proudly marking a decade of innovation, dedication, and success — thanks to our amazing team, clients, and partners who’ve fueled our journey from startup to standout.
             </motion.p>
           </div>
 
-          {/* Partner Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-  {partners.map((partner, index) => (
-    <motion.div
-      key={index}
-      initial={{ opacity: 0 }}
-      whileInView={{ 
-        opacity: 1,
-        transition: {
-          duration: 0.6,
-          delay: index * 0.2 + 0.3 // Increased base delay (0.3s) and per-item delay (0.2s)
-        }
-      }}
-      viewport={{ 
-        amount: 0.3,
-        once: false // Animation will trigger every time
-      }}
-      className="bg-[#120f23] rounded-2xl p-6 flex flex-col items-center text-center shadow-md hover:shadow-lg transition duration-300 w-full"
-    >
-      {/* Logo container */}
-      <div className="bg-white rounded-xl w-full aspect-[4/3] flex items-center justify-center mb-6 overflow-hidden">
-        <img
-          src={partner.logo}
-          alt={partner.name}
-          className="max-h-full max-w-[80%] object-contain"
-        />
-      </div>
-
-      
-
-      {/* Social Icons */}
-      <div className="flex justify-center items-center gap-4 text-lg text-white flex-wrap">
-        <motion.div 
-          whileHover={{ scale: 1.05, transition: { delay: 0.1 } }}
-          className="bg-[#0b61d6] p-2 rounded-full transition cursor-pointer"
-        >
-          <FaLinkedin />
-        </motion.div>
-        <motion.div 
-          whileHover={{ scale: 1.05, transition: { delay: 0.1 } }}
-          className="bg-[#e1306c] p-2 rounded-full transition cursor-pointer"
-        >
-          <FaInstagram />
-        </motion.div>
-        <motion.div 
-          whileHover={{ scale: 1.05, transition: { delay: 0.1 } }}
-          className="bg-[#2e2eec] p-2 rounded-full transition cursor-pointer"
-        >
-          <FaGlobe />
-        </motion.div>
-      </div>
-    </motion.div>
-  ))}
-</div>
+          {/* Card Container */}
+          <div className="max-w-7xl mx-auto">
+            <div className="flex flex-wrap justify-center gap-8">
+              {partners.map((partner, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0 }}
+                  whileInView={{
+                    opacity: 1,
+                    transition: {
+                      duration: 0.6,
+                      delay: index * 0.2 + 0.3,
+                    },
+                  }}
+                  viewport={{
+                    amount: 0.3,
+                    once: false,
+                  }}
+                  className="bg-[#120f23] rounded-2xl p-6 flex flex-col items-center text-center shadow-md hover:shadow-lg transition duration-300"
+                  style={{
+                    width: "290px", // Fixed width for all screen sizes
+                  }}
+                >
+                  <div className="bg-white rounded-xl w-full aspect-[4/3] flex items-center justify-center overflow-hidden">
+                    <img
+                      src={partner.logo}
+                      alt={partner.name}
+                      className="max-h-full max-w-[80%] object-contain"
+                    />
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
         </div>
+
 
       </div>
     </>

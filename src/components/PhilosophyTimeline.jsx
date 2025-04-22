@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -10,7 +10,7 @@ const steps = [
   { title: "Delivery & Support", side: "right" },
 ];
 
-const TimelineCard = ({ title, side, index, onInView }) => {
+const TimelineCard = ({ title, side, index, onInView, isMobile }) => {
   const controls = useAnimation();
   const dotControls = useAnimation();
   const [ref, inView] = useInView({
@@ -30,6 +30,13 @@ const TimelineCard = ({ title, side, index, onInView }) => {
     }
   }, [inView]);
 
+  // For mobile, always position on the right with larger size
+  const positionClass = isMobile 
+    ? "left-[calc(25%+40px)] sm:left-[calc(50%+60px)] md:left-[calc(50%+80px)]"
+    : side === "left"
+      ? "right-[calc(50%+40px)] sm:right-[calc(50%+60px)] md:right-[calc(50%+80px)]"
+      : "left-[calc(50%+40px)] sm:left-[calc(50%+60px)] md:left-[calc(50%+80px)]";
+
   return (
     <motion.div
       ref={ref}
@@ -46,21 +53,17 @@ const TimelineCard = ({ title, side, index, onInView }) => {
       className="relative h-24 sm:h-28 md:h-32"
     >
       <div
-        className={`absolute top-0 ${
-          side === "left"
-            ? "right-[calc(50%+40px)] sm:right-[calc(50%+60px)] md:right-[calc(50%+80px)]"
-            : "left-[calc(50%+40px)] sm:left-[calc(50%+60px)] md:left-[calc(50%+80px)]"
-        } w-40 sm:w-48 md:w-56`}
+        className={`absolute top-0 ${positionClass} ${isMobile ? 'w-52' : 'w-40'} sm:w-48 md:w-56`}
       >
         <div className="bg-[#161421] p-3 sm:p-4 md:p-5 rounded-lg border border-[#1f1d2b] shadow-lg flex flex-col items-center justify-center">
-          <div className="bg-gradient-to-r from-[#007AFF] to-[#7AC8FF] w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center">
+          <div className={`${isMobile ? 'w-10 h-10' : 'w-8 h-8'} sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gradient-to-r from-[#007AFF] to-[#7AC8FF] rounded-full flex items-center justify-center`}>
             <img
               src="/exam.png"
               alt="Exam"
-              className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 object-contain"
+              className={`${isMobile ? 'w-4 h-4' : 'w-3 h-3'} sm:w-4 sm:h-4 md:w-5 md:h-5 object-contain`}
             />
           </div>
-          <div className="text-white text-xs sm:text-sm font-medium mt-1 sm:mt-2 text-center">
+          <div className={`${isMobile ? 'text-sm' : 'text-xs'} sm:text-sm font-medium mt-1 sm:mt-2 text-center text-white`}>
             {title}
           </div>
         </div>
@@ -69,7 +72,7 @@ const TimelineCard = ({ title, side, index, onInView }) => {
       <motion.div
         animate={dotControls}
         initial={{ scale: 0, opacity: 0 }}
-        className="absolute left-1/2 transform -translate-x-1/2 top-8 sm:top-10 w-3 h-3 sm:w-4 sm:h-4 bg-blue-500 rounded-full z-10"
+        className={`absolute ${isMobile ? 'left-[25%]' : 'left-1/2'} transform -translate-x-1/2 top-8 sm:top-10 w-3 h-3 sm:w-4 sm:h-4 bg-blue-500 rounded-full z-10`}
       />
     </motion.div>
   );
@@ -77,20 +80,28 @@ const TimelineCard = ({ title, side, index, onInView }) => {
 
 const PhilosophyTimeline = () => {
   const [highestVisibleIndex, setHighestVisibleIndex] = useState(-1);
+  const [isMobile, setIsMobile] = useState(false);
   const lineControls = useAnimation();
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 640); // Tailwind's 'sm' breakpoint
+    };
+    
+    handleResize(); // Set initial value
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const handleCardInView = (index, inView) => {
     if (inView) {
-      // Only update if this index is higher than current highest
       if (index > highestVisibleIndex) {
         setHighestVisibleIndex(index);
         const newHeight = ((index + 1) / steps.length) * 100;
         lineControls.start({ height: `${newHeight}%` });
       }
     } else {
-      // If the current highest index goes out of view
       if (index === highestVisibleIndex) {
-        // Find the new highest visible index
         const newHighest = Math.max(0, highestVisibleIndex - 1);
         setHighestVisibleIndex(newHighest);
         const newHeight = ((newHighest + 1) / steps.length) * 100;
@@ -128,21 +139,19 @@ const PhilosophyTimeline = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-gray-400 text-xs sm:text-sm  mx-auto mt-3 sm:mt-4"
+          className="text-gray-400 text-sm sm:text-sm  mx-auto mt-3 sm:mt-4"
         >
-          Proudly marking a decade of innovation, dedication, and success—thanks
-          to our amazing team, clients, and partners who've fueled our journey
-          from startup to standout.
+          Our simple philosophy centers on collaboration, innovation, and dedication, driving success through strong partnerships with our team, clients, and partners to foster growth and excellence.
         </motion.p>
       </div>
 
       <div className="relative">
         {/* Base center line */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 sm:w-1 bg-gray-700 z-0"></div>
+        <div className={`absolute ${isMobile ? 'left-[25%]' : 'left-1/2'} transform -translate-x-1/2 h-full w-0.5 sm:w-1 bg-gray-700 z-0`}></div>
 
         {/* Animated fill line */}
         <motion.div
-          className="absolute left-1/2 transform -translate-x-1/2 w-0.5 sm:w-1 bg-blue-500 z-10 origin-top"
+          className={`absolute ${isMobile ? 'left-[25%]' : 'left-1/2'} transform -translate-x-1/2 w-0.5 sm:w-1 bg-blue-500 z-10 origin-top`}
           initial={{ height: 0 }}
           animate={lineControls}
           transition={{ duration: 0.4 }}
@@ -156,6 +165,7 @@ const PhilosophyTimeline = () => {
               side={step.side}
               index={index}
               onInView={handleCardInView}
+              isMobile={isMobile}
             />
           ))}
         </div>
