@@ -47,7 +47,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row md:space-x-6 space-y-3 md:space-y-0 text-gray-300 w-full md:w-auto">
             <div className="flex items-start md:items-center justify-start space-x-2">
               <FaMapMarkerAlt className="text-lg flex-shrink-0" />
-              <span>4th floor Apollo Premier Building Vijay Nagar, Indore (452010)</span>
+              <span>408 Apollo Premier Building Vijay Nagar, Indore (452010)</span>
             </div>
             <div className="flex items-start md:items-center justify-start space-x-2">
               <FaEnvelope className="text-lg flex-shrink-0" />
