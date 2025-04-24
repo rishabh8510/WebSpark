@@ -7,6 +7,7 @@ import img from "../assets/image.png";
 import BentoGridCard from "../components/BentoGridCard";
 import SolutionsSection from "../components/SoftwareSolutions";
 import ContactSection from "../components/ContactSection";
+import teamMembers from "../components/Team";
 
 
 
@@ -136,13 +137,6 @@ const textVariants = {
 
 //   =================== TeamShowCase==================
 
-const teamMembers = new Array(10).fill(
-  {
-    name: "Manish Shukla",
-    role: "Co-Founder & Director",
-    image: "/ceo.jpg",
-  }
-);
 
 const Home = () => {
   const cards = [
@@ -812,7 +806,7 @@ const Home = () => {
               {[...teamMembers, ...teamMembers].map((member, index) => (
                 <div
                   key={index}
-                  className="min-w-[250px] sm:min-w-[280px] rounded-xl overflow-hidden shadow-md relative h-[350px] bg-cover bg-center"
+                  className="min-w-[200px] sm:min-w-[280px] rounded-xl overflow-hidden shadow-md relative h-[270px] bg-cover bg-center"
                   style={{ backgroundImage: `url(${member.image})` }}
                 >
                   <div className="relative z-10 h-full flex flex-col justify-end bg-gradient-to-t from-black/60 via-black/30 to-transparent p-4">

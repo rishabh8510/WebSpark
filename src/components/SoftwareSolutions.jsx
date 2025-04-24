@@ -12,36 +12,31 @@ const solutions = [
         title: "Transport & Logistic Management Software",
         description: "Streamlining operations and optimizing efficiency in logistics management.",
         img: img,
-        details: "This software provides route optimization, fleet tracking, and shipment visibility.",
-        features: "Key features include GPS integration, real-time tracking, and automated billing.",
+
     },
     {
         title: "Inventory POS Solution",
         description: "Efficient inventory tracking and seamless point-of-sale management system.",
         img: img1,
-        details: "Our POS system integrates with inventory for real-time stock updates.",
-        features: "Includes barcode scanning, sales reporting, and multi-store management.",
+
     },
     {
         title: "Ecommerce Solution",
         description: "Comprehensive eCommerce platform for seamless shopping and management.",
         img: img2,
-        details: "This solution supports online catalogs, carts, and secure checkout.",
-        features: "Mobile optimization, customer reviews, and multi-payment options.",
+
     },
     {
         title: "Warehouse Management Software",
         description: "Optimizing inventory flow and enhancing warehouse operational efficiency.",
         img: img3,
-        details: "Helps with order picking, receiving, and restocking.",
-        features: "Includes RFID scanning, bin tracking, and analytics dashboards.",
+
     },
     {
         title: "EdTech Solution & School Management Software",
         description: "Empowering education with streamlined management and digital learning tools.",
         img: img4,
-        details: "Supports attendance tracking, grading, and course management.",
-        features: "Includes e-learning modules, parent portals, and timetable generation.",
+
     },
 ];
 
@@ -164,21 +159,9 @@ export default function SolutionsSection() {
                         </button>
                         <img
                             src={selectedProject.img}
-                            alt={selectedProject.title}
                             className="w-full h-40 object-cover rounded-md mb-4"
                         />
-                        <h3 className="text-xl font-semibold mb-2">{selectedProject.title}</h3>
-                        <p className="mb-2">{selectedProject.description}</p>
-                        {selectedProject.details && (
-                            <p className="text-sm text-gray-700 mb-2">
-                                <strong>Details:</strong> {selectedProject.details}
-                            </p>
-                        )}
-                        {selectedProject.features && (
-                            <p className="text-sm text-gray-700">
-                                <strong>Features:</strong> {selectedProject.features}
-                            </p>
-                        )}
+   
                     </div>
                 </div>
             )}
