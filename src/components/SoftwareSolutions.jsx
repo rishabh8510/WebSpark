@@ -1,6 +1,10 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
-import img from "../assets/image.png"; // Replace this with other images as needed
+import img from "../assets/Transport.png";
+import img1 from "../assets/Inventory.png";
+import img2 from "../assets/Ecommerce.png";
+import img3 from "../assets/Warehouse.png";
+import img4 from "../assets/Edtech.png";
 
 // ✅ Solution Data with extra fields
 const solutions = [
@@ -14,28 +18,28 @@ const solutions = [
     {
         title: "Inventory POS Solution",
         description: "Efficient inventory tracking and seamless point-of-sale management system.",
-        img: img,
+        img: img1,
         details: "Our POS system integrates with inventory for real-time stock updates.",
         features: "Includes barcode scanning, sales reporting, and multi-store management.",
     },
     {
         title: "Ecommerce Solution",
         description: "Comprehensive eCommerce platform for seamless shopping and management.",
-        img: img,
+        img: img2,
         details: "This solution supports online catalogs, carts, and secure checkout.",
         features: "Mobile optimization, customer reviews, and multi-payment options.",
     },
     {
         title: "Warehouse Management Software",
         description: "Optimizing inventory flow and enhancing warehouse operational efficiency.",
-        img: img,
+        img: img3,
         details: "Helps with order picking, receiving, and restocking.",
         features: "Includes RFID scanning, bin tracking, and analytics dashboards.",
     },
     {
         title: "EdTech Solution & School Management Software",
         description: "Empowering education with streamlined management and digital learning tools.",
-        img: img,
+        img: img4,
         details: "Supports attendance tracking, grading, and course management.",
         features: "Includes e-learning modules, parent portals, and timetable generation.",
     },

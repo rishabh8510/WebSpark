@@ -6,6 +6,7 @@ import PhilosophyTimeline from "../components/PhilosophyTimeline";
 import img from "../assets/image.png";
 import BentoGridCard from "../components/BentoGridCard";
 import SolutionsSection from "../components/SoftwareSolutions";
+import ContactSection from "../components/ContactSection";
 
 
 
@@ -145,16 +146,16 @@ const teamMembers = new Array(10).fill(
 
 const Home = () => {
   const cards = [
-    { img: "/1.jpg", title: "Mei Ling", desc: "AI & ANALYTICS MEET" },
+    { img: "/1.jpg", title: "Michael Brooks", desc: "AI & ANALYTICS MEET" },
     { img: "/2.jpg", title: "Liam Anderson", desc: "INNOVATION SUMMIT 2024" },
-    { img: "/3.jpg", title: "Isabella Müller", desc: "DESIGN WEEK ABU DHABI" },
-    { img: "/4.jpg", title: "Hiroshi Tanaka", desc: "RIYADH FUTURE FORUM" },
-    { img: "/5.jpg", title: "Amara Patel", desc: "FUTURE TECH TALK" },
-    { img: "/6.jpg", title: "Enzo Moretti", desc: "INTERNATIONAL BIZ EXPO" },
-    { img: "/7.jpg", title: "Sophie Dubois", desc: "TECH FRONTIERS" },
-    { img: "/8.jpg", title: "Carlos Navarro", desc: "STARTUP CONCLAVE" },
-    { img: "/9.jpg", title: "Noura Al-Farsi", desc: "CLOUD EXPO EUROPE" },
-    { img: "/10.jpg", title: "Lukas Schneider", desc: "BRANDSTRATEGY LIVE" },
+    { img: "/3.jpg", title: "James Anderson", desc: "DESIGN WEEK ABU DHABI" },
+    { img: "/4.jpg", title: "Emma Carter", desc: "RIYADH FUTURE FORUM" },
+    { img: "/5.jpg", title: "Khalid Safwan", desc: "FUTURE TECH TALK" },
+    { img: "/6.jpg", title: "Ruan Botha", desc: "INTERNATIONAL BIZ EXPO" },
+    { img: "/7.jpg", title: "Nawaf Basim", desc: "TECH FRONTIERS" },
+    { img: "/8.jpg", title: "Daniel Turner", desc: "STARTUP CONCLAVE" },
+    { img: "/9.jpg", title: "Jacob Parker", desc: "CLOUD EXPO EUROPE" },
+    { img: "/10.jpg", title: "Zaid Nafees", desc: "BRANDSTRATEGY LIVE" },
     { img: "/11.jpg", title: "MR HAMIN", desc: "GITEX DUBAI EXPO" },
   ];
 
@@ -902,6 +903,7 @@ const Home = () => {
           </div>
         </div>
 
+       <ContactSection/>
 
       </div>
     </>
