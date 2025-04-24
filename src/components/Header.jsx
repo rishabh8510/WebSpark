@@ -83,7 +83,7 @@ const Header = () => {
           <div className="flex items-center gap-6 text-white text-xs font-light">
             <div className="flex items-center gap-2">
               <IoIosMail className="h-5 w-5" />
-              <a href="mailto:hr@bluewebspark.com">hr@bluewebspark.com</a>
+              <a href="mailto:hr@bluewebspark.com">info@bluewebspark.com | hr@bluewebspark.com</a>
             </div>
             <div className="flex items-center gap-2">
               <FaPhone className="h-4 w-4" />

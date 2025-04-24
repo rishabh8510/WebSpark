@@ -51,7 +51,7 @@ export default function Footer() {
             </div>
             <div className="flex items-start md:items-center justify-start space-x-2">
               <FaEnvelope className="text-lg flex-shrink-0" />
-              <span>hr@bluewebspark.com</span>
+              <span>info@bluewebspark.com | hr@bluewebspark.com</span>
             </div>
             <div className="flex items-start md:items-center justify-start space-x-2">
               <FaPhoneAlt className="text-lg flex-shrink-0" />
