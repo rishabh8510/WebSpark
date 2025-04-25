@@ -57,6 +57,7 @@ const SolutionCard = ({ title, description, img, id }) => {
     }, [inView, controls]);
 
     const handleClick = () => {
+        window.scrollTo(0, 0); // Scroll to top on click
         navigate(`/solution/${id}`);
     };
 
@@ -70,7 +71,7 @@ const SolutionCard = ({ title, description, img, id }) => {
             <div className="flex flex-wrap justify-between items-center gap-4">
                 <div className="flex items-center gap-4 flex-1 min-w-[250px]">
                     <img
-                        src={img}  // Use the passed image prop
+                        src={img}
                         alt={title}
                         className="w-14 h-14 sm:w-16 sm:h-16 object-cover rounded-md"
                     />
@@ -80,7 +81,7 @@ const SolutionCard = ({ title, description, img, id }) => {
                     </div>
                 </div>
                 <button
-                    onClick={handleClick} // Click redirects to a specific page
+                    onClick={handleClick}
                     className="px-5 py-2 border border-blue-500 text-blue-500 text-sm rounded hover:bg-gradient-to-r from-[#007AFF] to-[#7AC8FF] hover:text-white transition"
                 >
                     View

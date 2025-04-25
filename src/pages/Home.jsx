@@ -8,6 +8,7 @@ import BentoGridCard from "../components/BentoGridCard";
 import SolutionsSection from "../components/SoftwareSolutions";
 import ContactSection from "../components/ContactSection";
 import teamMembers from "../components/Team";
+import TestimonialsGrid from "../components/Testimonial";
 
 
 
@@ -896,7 +897,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-
+       <TestimonialsGrid/>
        <ContactSection/>
 
       </div>

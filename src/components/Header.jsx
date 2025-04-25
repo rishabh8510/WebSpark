@@ -4,6 +4,7 @@ import { IoIosMail } from "react-icons/io";
 import { FaPhone } from "react-icons/fa6";
 import { HiOutlineDownload, HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 import { US, GB, EU, AU, CA } from 'country-flag-icons/react/3x2';
+import { Link } from 'react-router-dom';
 import {
   FaGlobe, FaStethoscope, FaUtensils, FaFilm, FaPlane, FaMotorcycle,
   FaCalendarAlt, FaGasPump, FaNetworkWired, FaTools, FaShoppingCart,
@@ -402,7 +403,9 @@ const Header = () => {
       {/* Main Nav */}
       <div className="w-full px-4 py-3">
         <div className="max-w-screen-xl mx-auto flex justify-between items-center">
-          <img src={logo} alt="Logo" className="h-12" />
+        <Link to="/">
+            <img src={logo} alt="Logo" className="h-12" />
+          </Link>
 
           {/* Desktop Nav */}
           <div className="hidden lg:flex gap-6 text-white text-sm font-light">

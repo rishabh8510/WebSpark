@@ -2,21 +2,32 @@ import ContactCard from "../components/ContactCard";
 
 export default function PageFive() {
     return (
-        <div className="bg-[#000a16] text-white overflow-x-hidden pt-16 md:pt-20 lg:pt-[150px]">
+        <div className="bg-[#000a16] text-white overflow-x-hidden pt-16 md:pt-20 lg:mt-[-80px]">
             {/* Hero Section */}
-            <div
-                 className="relative w-full h-auto min-h-[530px] bg-[#000a16] lg:bg-cover lg:bg-center lg:bg-no-repeat  pt-40 sm:pt-28 lg:pt-[100px] lg:mb-[150px] pb-10 sm:pb-14"
-                 style={{ backgroundImage: "url('/bg5.png')" }}
-            >
-                <div className="max-w-7xl mx-auto">
-                    <div className="text-white max-w-xl ml-4 lg:ml-40 mt-8 lg:mt-12">
-                        <h1 className="text-4xl md:text-5xl font-semibold mb-4 leading-tight">
-                            Warehouse<br />Management<br />System
+            <div className="relative bg-[#000a16] text-white h-[740px] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16">
+                <div className="max-w-7xl w-full flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
+
+                    {/* Text Section */}
+                    <div className="w-full lg:w-1/2 lg:text-left order-2 lg:order-1 mt-20 lg:mt-0">
+                        <h1 className="text-4xl sm:text-4xl md:text-5xl font-semibold leading-tight">
+                            Warehouse <br />Management <br />System
                         </h1>
-                        <p className="text-gray-400 text-sm">
+                        <p className="mt-4 sm:mt-6  sm:text-sm text-gray-400">
                             Efficient Warehouse Management for Inventory Tracking, Fulfillment, and Reporting
                         </p>
                     </div>
+
+                    {/* Image Section */}
+                    <div className="w-full lg:w-1/2 flex justify-center order-1 lg:order-2">
+                        <div className="w-full max-w-[500px] sm:max-w-[600px]">
+                            <img
+                                src="/m.png"
+                                alt="Dashboard preview on laptop"
+                                className="w-full h-auto rounded-xl shadow-2xl"
+                            />
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
@@ -105,7 +116,7 @@ export default function PageFive() {
                     </div>
                 </section>
             </div>
-            
+
             {/* Contact */}
             <ContactCard />
         </div>

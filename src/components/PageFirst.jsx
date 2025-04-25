@@ -1,28 +1,41 @@
 import ContactCard from "../components/ContactCard";
+// import HeroSection from "./HeroSection";
 
 export default function PageFirst() {
     return (
         <div className="bg-[#000a16] text-white">
-            {/* Hero Section with responsive background */}
-            <div
-                className="relative w-full h-auto min-h-[530px] bg-[#000a16] lg:bg-cover lg:bg-center lg:bg-no-repeat lg:mt-26 pt-40 sm:pt-28 lg:pt-[230px] lg:mb-[150px] pb-10 sm:pb-14"
-                style={{ backgroundImage: "url('/bg1.png')" }}
-            >
-                {/* Content that remains visible on all screens */}
-                <div className="text-white max-w-xl ml-8 lg:ml-32">
-                    <h1 className="text-4xl md:text-5xl font-semibold mb-4 leading-tight">
-                        Transport & Logistic<br />Management Software
-                    </h1>
-                    <p className="text-gray-400 text-sm">
-                        Comprehensive Solution for Managing Transport, Logistics, and Fleet Operations
-                    </p>
-                </div>
+              <div className="relative bg-[#000a16] text-white h-[740px] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16">
+        <div className="max-w-7xl w-full flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
+          
+          {/* Text Section */}
+          <div className="w-full lg:w-1/2  lg:text-left order-2 lg:order-1 mt-20 lg:mt-0">
+            <h1 className="text-4xl sm:text-4xl md:text-5xl font-semibold leading-tight">
+              Transport & Logistic <br />
+              <span className="text-gray-300">Management Software</span>
+            </h1>
+            <p className="mt-4 sm:mt-6  sm:text-sm text-gray-400">
+            Comprehensive Solution for Managing Transport, Logistics, and Fleet Operations
+            </p>
+          </div>
+  
+          {/* Image Section */}
+          <div className="w-full lg:w-1/2 flex justify-center order-1 lg:order-2">
+            <div className="w-full max-w-[500px] sm:max-w-[600px]">
+              <img
+                src="/m.png"
+                alt="Dashboard preview on laptop"
+                className="w-full h-auto rounded-xl shadow-2xl"
+              />
             </div>
+          </div>
+          
+        </div>
+      </div>
 
             {/* Main Content Section */}
-            <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20">
+            <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 mt-20">
                 {/* About the Project Section */}
-                <section className="text-white p-8 md:p-16 pt-32 space-y-24 lg:mt-[100px]">
+                <section className="text-white  py-8 md:py-12 lg:py-16 space-y-16 lg:space-y-20">
                     <div className="grid md:grid-cols-2 gap-8 items-center mt-[-100px]">
                         <div className="flex justify-center">
                             <img
