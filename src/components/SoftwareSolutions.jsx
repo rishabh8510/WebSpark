@@ -1,81 +1,87 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import img from "../assets/Transport.png";
 import img1 from "../assets/Inventory.png";
 import img2 from "../assets/Ecommerce.png";
 import img3 from "../assets/Warehouse.png";
 import img4 from "../assets/Edtech.png";
 
-// ✅ Solution Data with extra fields
+// 🧠 Solution Data
 const solutions = [
     {
+        id: "transport",
         title: "Transport & Logistic Management Software",
         description: "Streamlining operations and optimizing efficiency in logistics management.",
         img: img,
-
     },
     {
+        id: "inventory",
         title: "Inventory POS Solution",
         description: "Efficient inventory tracking and seamless point-of-sale management system.",
         img: img1,
-
     },
     {
+        id: "ecommerce",
         title: "Ecommerce Solution",
         description: "Comprehensive eCommerce platform for seamless shopping and management.",
         img: img2,
-
     },
     {
+        id: "warehouse",
         title: "Warehouse Management Software",
         description: "Optimizing inventory flow and enhancing warehouse operational efficiency.",
         img: img3,
-
     },
     {
+        id: "edtech",
         title: "EdTech Solution & School Management Software",
         description: "Empowering education with streamlined management and digital learning tools.",
         img: img4,
-
     },
 ];
 
-// 🎴 Card Component
-const SolutionCard = ({ title, description, img, onViewClick }) => {
+// 🧩 Card Component
+const SolutionCard = ({ title, description, img, id }) => {
     const ref = useRef(null);
     const inView = useInView(ref, { once: false, amount: 0.3 });
     const controls = useAnimation();
+    const navigate = useNavigate();
 
     useEffect(() => {
         if (inView) {
-            controls.start({ scale: 1, opacity: 1, transition: { duration: 0.1, ease: "easeInOut" } });
+            controls.start({ scale: 1, opacity: 1, transition: { duration: 0.2 } });
         } else {
             controls.start({ scale: 0.95, opacity: 0 });
         }
     }, [inView, controls]);
+
+    const handleClick = () => {
+        navigate(`/solution/${id}`);
+    };
 
     return (
         <motion.div
             ref={ref}
             animate={controls}
             initial={{ scale: 0.95, opacity: 0 }}
-            className="w-full max-w-4xl lg:max-w-7xl p-3 sm:p-4 md:p-6 border-grey-800 rounded-lg md:rounded-xl shadow-md hover:shadow-lg transition duration-300 border border-[#1F2235]"
+            className="w-full max-w-4xl lg:max-w-7xl p-4 border border-[#1F2235] rounded-xl shadow-md hover:shadow-lg transition duration-300 bg-[#0F111C]"
         >
-            <div className="flex flex-row justify-between items-center gap-4 flex-wrap">
-                <div className="flex items-center gap-3 flex-1 min-w-[250px]">
+            <div className="flex flex-wrap justify-between items-center gap-4">
+                <div className="flex items-center gap-4 flex-1 min-w-[250px]">
                     <img
-                        src={img}
-                        alt="software"
-                        className="rounded-md w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 object-cover"
+                        src={img}  // Use the passed image prop
+                        alt={title}
+                        className="w-14 h-14 sm:w-16 sm:h-16 object-cover rounded-md"
                     />
                     <div>
-                        <h3 className="font-semibold text-sm sm:text-base md:text-lg mb-1 text-white">{title}</h3>
-                        <p className="text-xs text-gray-400">{description}</p>
+                        <h3 className="font-semibold text-md text-white">{title}</h3>
+                        <p className="text-sm text-gray-400">{description}</p>
                     </div>
                 </div>
                 <button
-                    onClick={onViewClick}
-                    className="px-4 py-1.5 sm:px-5 sm:py-2 border border-blue-500 text-blue-500 text-xs sm:text-sm rounded mt-3 sm:mt-0 hover:bg-gradient-to-r from-[#007AFF] to-[#7AC8FF] hover:text-white transition"
+                    onClick={handleClick} // Click redirects to a specific page
+                    className="px-5 py-2 border border-blue-500 text-blue-500 text-sm rounded hover:bg-gradient-to-r from-[#007AFF] to-[#7AC8FF] hover:text-white transition"
                 >
                     View
                 </button>
@@ -84,87 +90,51 @@ const SolutionCard = ({ title, description, img, onViewClick }) => {
     );
 };
 
-// 🔧 Main Section Component
+// 🧱 Main Section
 export default function SolutionsSection() {
-    const [selectedProject, setSelectedProject] = useState(null);
-
-    const handleViewClick = (project) => {
-        setSelectedProject(project);
-    };
-
-    const closeModal = () => {
-        setSelectedProject(null);
-    };
-
     return (
-        <>
-            <section className="mt-12 md:mt-24 px-4 sm:px-6 lg:px-8 bg-[#010101]">
-                {/* Section Header */}
-                <div className="text-center mb-8 md:mb-12">
-                    <motion.span
-                        initial={{ x: -60, opacity: 0 }}
-                        whileInView={{ x: 0, opacity: 1 }}
-                        transition={{ duration: 0.6, ease: "easeInOut" }}
-                        viewport={{ once: false, amount: 0.3 }}
-                        className="inline-block px-4 py-1 border border-[#3A4C6C] rounded-full text-xs tracking-widest bg-[#0D1B36]"
-                    >
-                        <span className="bg-gradient-to-r from-[#BFDFFF] via-[#339BFF] to-[#BFDFFF] bg-clip-text text-transparent">
-                            Effortless Tech
-                        </span>
-                    </motion.span>
+        <section className="mt-16 px-4 sm:px-6 lg:px-8 bg-[#010101]">
+            {/* Header */}
+            <div className="text-center mb-12">
+                <motion.span
+                    initial={{ x: -60, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 0.6 }}
+                    className="inline-block px-4 py-1 border border-[#3A4C6C] rounded-full text-xs tracking-widest bg-[#0D1B36]"
+                >
+                    <span className="bg-gradient-to-r from-[#BFDFFF] via-[#339BFF] to-[#BFDFFF] bg-clip-text text-transparent">
+                        Effortless Tech
+                    </span>
+                </motion.span>
 
-                    <motion.h2
-                        initial={{ scale: 0.95, opacity: 0 }}
-                        whileInView={{ scale: 1, opacity: 1 }}
-                        transition={{ duration: 0.6, ease: "easeInOut", delay: 0.1 }}
-                        viewport={{ once: false, amount: 0.3 }}
-                        className="mt-4 text-2xl sm:text-3xl md:text-4xl font-semibold text-white"
-                    >
-                        <span className="bg-gradient-to-r from-[#007AFF] to-[#7AC8FF] bg-clip-text text-transparent">
-                            Software
-                        </span>{" "}
-                        Solution
-                    </motion.h2>
+                <motion.h2
+                    initial={{ scale: 0.95, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    transition={{ duration: 0.6, delay: 0.1 }}
+                    className="mt-4 text-4xl font-semibold text-white"
+                >
+                    <span className="bg-gradient-to-r from-[#007AFF] to-[#7AC8FF] bg-clip-text text-transparent">
+                        Software
+                    </span>{" "}
+                    Solution
+                </motion.h2>
 
-                    <motion.p
-                        initial={{ x: 60, opacity: 0 }}
-                        whileInView={{ x: 0, opacity: 1 }}
-                        transition={{ duration: 0.6, ease: "easeInOut", delay: 0.2 }}
-                        viewport={{ once: false, amount: 0.3 }}
-                        className="mt-3 md:mt-4 text-gray-400 max-w-[740px] mx-auto text-sm sm:text-sm"
-                    >
-                        Empowering businesses with innovative, scalable, and user-friendly software solutions, crafted to streamline operations, enhance productivity, optimize performance, and drive digital transformation across diverse industries and sectors
-                    </motion.p>
-                </div>
-                <div className="space-y-4 flex flex-col items-center">
-                    {solutions.map((solution, index) => (
-                        <SolutionCard
-                            key={index}
-                            {...solution}
-                            onViewClick={() => handleViewClick(solution)}
-                        />
-                    ))}
-                </div>
-            </section>
+                <motion.p
+                    initial={{ x: 60, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    className="mt-4 text-gray-400 max-w-2xl mx-auto text-sm"
+                >
+                    Empowering businesses with innovative, scalable, and user-friendly software solutions, crafted to streamline operations, enhance productivity, and drive digital transformation.
+                </motion.p>
+            </div>
 
-            {/* 💬 Modal */}
-            {selectedProject && (
-                <div className="fixed inset-0  bg-opacity-60 flex items-center justify-center z-50 px-4">
-                    <div className="bg-white text-black rounded-lg shadow-lg max-w-md w-full p-6 relative">
-                        <button
-                            onClick={closeModal}
-                            className="absolute top-0 right-1 text-gray-500 hover:text-black text-2xl"
-                        >
-                            &times;
-                        </button>
-                        <img
-                            src={selectedProject.img}
-                            className="w-full h-40 object-cover rounded-md mb-4"
-                        />
-   
-                    </div>
-                </div>
-            )}
-        </>
+            {/* Cards */}
+            <div className="flex flex-col items-center gap-6">
+                {solutions.map((solution) => (
+                    <SolutionCard key={solution.id} {...solution} />
+                ))}
+            </div>
+        </section>
     );
 }
