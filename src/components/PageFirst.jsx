@@ -4,36 +4,36 @@ import ContactCard from "../components/ContactCard";
 export default function PageFirst() {
     return (
         <div className="bg-[#000a16] text-white">
-              <div className="relative bg-[#000a16] text-white h-[740px] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16">
-        <div className="max-w-7xl w-full flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
-          
-          {/* Text Section */}
-          <div className="w-full lg:w-1/2  lg:text-left order-2 lg:order-1 mt-20 lg:mt-0">
-            <h1 className="text-4xl sm:text-4xl md:text-5xl font-semibold leading-tight">
-              Transport & Logistic <br />
-              <span className="text-gray-300">Management Software</span>
-            </h1>
-            <p className="mt-4 sm:mt-6  sm:text-sm text-gray-400">
-            Comprehensive Solution for Managing Transport, Logistics, and Fleet Operations
-            </p>
-          </div>
-  
-          {/* Image Section */}
-          <div className="w-full lg:w-1/2 flex justify-center order-1 lg:order-2">
-            <div className="w-full max-w-[500px] sm:max-w-[600px]">
-              <img
-                src="/m.png"
-                alt="Dashboard preview on laptop"
-                className="w-full h-auto rounded-xl shadow-2xl"
-              />
+            <div className="relative bg-[#000a16] text-white h-[740px] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16">
+                <div className="max-w-7xl w-full flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
+
+                    {/* Text Section */}
+                    <div className="w-full lg:w-1/2  lg:text-left order-2 lg:order-1 mt-20 lg:mt-0">
+                        <h1 className="text-4xl sm:text-4xl md:text-5xl font-semibold leading-tight">
+                            Transport & Logistic <br />
+                            <span className="text-gray-300">Management Software</span>
+                        </h1>
+                        <p className="mt-4 sm:mt-6  sm:text-sm text-gray-400">
+                            Comprehensive Solution for Managing Transport, Logistics, and Fleet Operations
+                        </p>
+                    </div>
+
+                    {/* Image Section */}
+                    <div className="w-full lg:w-1/2 flex justify-center order-1 lg:order-2">
+                        <div className="w-full max-w-[500px] sm:max-w-[600px]">
+                            <img
+                                src="/m.png"
+                                alt="Dashboard preview on laptop"
+                                className="w-full h-auto rounded-xl shadow-2xl"
+                            />
+                        </div>
+                    </div>
+
+                </div>
             </div>
-          </div>
-          
-        </div>
-      </div>
 
             {/* Main Content Section */}
-            <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 mt-20">
+            <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 mt-20 lg:mr-24">
                 {/* About the Project Section */}
                 <section className="text-white  py-8 md:py-12 lg:py-16 space-y-16 lg:space-y-20">
                     <div className="grid md:grid-cols-2 gap-8 items-center mt-[-100px]">
@@ -61,7 +61,7 @@ export default function PageFirst() {
                 {/* Features & Solutions Section */}
                 <section className="py-16 space-y-24">
                     {/* Features */}
-                    <div className="grid md:grid-cols-2 gap-12 items-start">
+                    <div className="grid md:grid-cols-2 gap-12 items-start lg:ml-16">
                         {/* Left: Text + Feature Buttons */}
                         <div>
                             <h2 className="text-4xl font-bold mb-4">Features</h2>
@@ -97,7 +97,7 @@ export default function PageFirst() {
                     </div>
 
                     {/* Solutions */}
-                    <div className="grid md:grid-cols-2 gap-12 items-center">
+                    <div className="grid md:grid-cols-2 gap-12 items-center lg:ml-10">
                         {/* Left: Solutions Image */}
                         <div className="flex justify-center h-[350px]">
                             <img
@@ -120,7 +120,7 @@ export default function PageFirst() {
                     </div>
                 </section>
             </div>
-            
+
             {/* Contact Section */}
             <ContactCard />
         </div>

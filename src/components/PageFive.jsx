@@ -33,7 +33,7 @@ export default function PageFive() {
 
             <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20">
                 {/* About the Project */}
-                <section className="text-white py-8 md:py-12 lg:py-16 space-y-16 lg:space-y-20">
+                <section className="text-white py-8 md:py-12 lg:py-16 space-y-16 lg:space-y-20 lg:mr-24">
                     <div className="grid md:grid-cols-2 gap-8 items-center">
                         <div className="flex justify-center">
                             <img
@@ -59,7 +59,7 @@ export default function PageFive() {
                 {/* Features & Solutions Section */}
                 <section className="py-12 md:py-16 space-y-16 lg:space-y-20">
                     {/* Features */}
-                    <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-start">
+                    <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-start lg:ml-16">
                         {/* Left: Text + Feature Buttons */}
                         <div className="ml-0 lg:ml-8 xl:ml-12">
                             <h2 className="text-4xl font-bold mb-4">Features</h2>
@@ -93,9 +93,9 @@ export default function PageFive() {
                     </div>
 
                     {/* Solutions */}
-                    <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
+                    <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center lg:mr-15">
                         {/* Left: Solutions Image */}
-                        <div className="flex justify-center h-auto md:h-[350px] ml-0 lg:ml-8 xl:ml-12 order-1 md:order-2">
+                        <div className="flex justify-center h-auto md:h-[350px] ml-0 lg:ml-8 xl:ml-12 ">
                             <img
                                 src="/moc5.3.png"
                                 alt="Solutions Dashboard"
@@ -104,7 +104,7 @@ export default function PageFive() {
                         </div>
 
                         {/* Right: Solutions Text */}
-                        <div className="mr-0 lg:mr-8 xl:mr-12 order-2 md:order-1">
+                        <div className="mr-0 lg:mr-8 xl:mr-12 ">
                             <h2 className="text-4xl font-bold mb-4">Solutions</h2>
                             <p className="text-gray-300 mb-4 text-sm text-justify">
                                 This Warehouse Management System provides an integrated set of tools for effective warehouse management and member-based logistics. It allows companies to control members' inventory and warehouse space, monitor shipment and fulfillment orders, and automate sales processes from a centralized platform. With an effective product management module, users can add, update, and manage inventory with ease. The system enables label printing, rate management, and ticket processing to ensure smooth communication and service resolution. Admins can delegate roles, track warehouse utilization, and manage order fulfillment in real-time. Sales reporting and invoice generation functionality ensures transparent financial information, accurate and timely billing.

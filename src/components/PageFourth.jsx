@@ -34,7 +34,7 @@ export default function PageFourth() {
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20">
 
         {/* Hero Section */}
-        <section className=" text-white py-8 md:py-12 lg:py-16 space-y-16 lg:space-y-20">
+        <section className=" text-white py-8 md:py-12 lg:py-16 space-y-16 lg:space-y-20 lg:mr-24">
           {/* Top Section */}
 
 
@@ -64,7 +64,7 @@ export default function PageFourth() {
         {/* Features & Solutions Section */}
         <section className="py-16 space-y-24">
           {/* Features */}
-          <div className="grid md:grid-cols-2 gap-12 items-start">
+          <div className="grid md:grid-cols-2 gap-12 items-start lg:ml-16">
             {/* Left: Text + Feature Buttons */}
             <div>
               <h2 className="text-4xl font-bold mb-4">Features</h2>
@@ -99,7 +99,7 @@ export default function PageFourth() {
           </div>
 
           {/* Solutions */}
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-12 items-center lg:mr-15">
             {/* Left: Solutions Image */}
             <div className="flex justify-center h-[350px]">
               <img

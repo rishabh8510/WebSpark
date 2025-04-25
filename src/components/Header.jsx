@@ -5,6 +5,20 @@ import { FaPhone } from "react-icons/fa6";
 import { HiOutlineDownload, HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 import { US, GB, EU, AU, CA } from 'country-flag-icons/react/3x2';
 import { Link } from 'react-router-dom';
+
+
+// लोगो क्लिक हैंडलर
+const handleLogoClick = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth' // स्मूथ स्क्रॉलिंग के लिए
+  });
+};
+
+// लोगो को इस तरह रैप करें
+<Link to="/" onClick={handleLogoClick}>
+  <img src={logo} alt="Logo" className="h-12" />
+</Link>
 import {
   FaGlobe, FaStethoscope, FaUtensils, FaFilm, FaPlane, FaMotorcycle,
   FaCalendarAlt, FaGasPump, FaNetworkWired, FaTools, FaShoppingCart,
@@ -403,7 +417,7 @@ const Header = () => {
       {/* Main Nav */}
       <div className="w-full px-4 py-3">
         <div className="max-w-screen-xl mx-auto flex justify-between items-center">
-        <Link to="/">
+        <Link to="/" onClick={handleLogoClick}>
             <img src={logo} alt="Logo" className="h-12" />
           </Link>
 
