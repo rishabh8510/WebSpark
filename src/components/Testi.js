@@ -21,7 +21,7 @@ const testimonials = [
         message: "Manish done the project as per I need, nothing to complain about, he fixed all issues i had reported.I highly recommend him.",
         name: "Andrei Angel Î.",
         country:"Lasi, Romania",
-        avatar: "/ceo.jpg",
+        avatar: "/Romania.webp",
       },
       {
         message: "Manish & His Team has been a great value to our project, we are extremely satisfied with this professionalism. He's a rare combination of talent, hardwork with great work ethic.",
