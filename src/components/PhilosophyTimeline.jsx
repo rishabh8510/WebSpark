@@ -31,7 +31,7 @@ const TimelineCard = ({ title, side, index, onInView, isMobile }) => {
   }, [inView]);
 
   // For mobile, always position on the right with larger size
-  const positionClass = isMobile 
+  const positionClass = isMobile
     ? "left-[calc(25%+40px)] sm:left-[calc(50%+60px)] md:left-[calc(50%+80px)]"
     : side === "left"
       ? "right-[calc(50%+40px)] sm:right-[calc(50%+60px)] md:right-[calc(50%+80px)]"
@@ -87,7 +87,7 @@ const PhilosophyTimeline = () => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 640); // Tailwind's 'sm' breakpoint
     };
-    
+
     handleResize(); // Set initial value
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);

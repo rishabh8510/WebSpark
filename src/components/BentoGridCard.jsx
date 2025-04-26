@@ -2,20 +2,20 @@ import React, { useEffect, useState } from 'react';
 
 const SwappingCards = () => {
   const leftImages = [
-    './card/img1.jpg',
-    './card/img2.jpg',
-    './card/img3.jpg',
-    './card/img4.jpg',
-    './card/img5.jpg',
-    './card/img6.jpg',
-    './card/img7.jpg',
+    '/card/img1.jpg',
+    '/card/img2.jpg',
+    '/card/img3.jpg',
+    '/card/img4.jpg',
+    '/card/img5.jpg',
+    '/card/img6.jpg',
+    '/card/img7.jpg',
   ];
 
   const rightImages = [
-    './second/img1.jpg',
-    './second/img2.jpg',
-    './second/img3.jpg',
-    './second/img4.jpg',
+    '/second/img1.jpg',
+    '/second/img2.jpg',
+    '/second/img3.jpg',
+    '/second/img4.jpg',
     'https://images.unsplash.com/photo-1504384308090-c894fdcc538d',
     'https://images.unsplash.com/photo-1519389950473-47ba0277781c',
     'https://images.unsplash.com/photo-1557804506-669a67965ba0',

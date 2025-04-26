@@ -7,15 +7,15 @@ import { US, GB, EU, AU, CA } from 'country-flag-icons/react/3x2';
 import { Link } from 'react-router-dom';
 
 
-// लोगो क्लिक हैंडलर
+
 const handleLogoClick = () => {
   window.scrollTo({
     top: 0,
-    behavior: 'smooth' // स्मूथ स्क्रॉलिंग के लिए
+    behavior: 'smooth' 
   });
 };
 
-// लोगो को इस तरह रैप करें
+
 <Link to="/" onClick={handleLogoClick}>
   <img src={logo} alt="Logo" className="h-12" />
 </Link>
@@ -102,6 +102,7 @@ import {
   FaSlidersH,
   FaMapPin
 } from 'react-icons/fa';
+import { path } from 'framer-motion/client';
 
 
 
@@ -372,9 +373,16 @@ const mobileMenuLinks = [
     ]
   },
   {
+    title: "Career",
+    id: "career",
+    subItems: null,
+    path: "/Career"
+  },
+  {
     title: "Contact Us",
     id: "contact",
-    subItems: null
+    subItems: null,
+    path: "/ContactUs"
   }
 ];
 
@@ -417,7 +425,7 @@ const Header = () => {
       {/* Main Nav */}
       <div className="w-full px-4 py-3">
         <div className="max-w-screen-xl mx-auto flex justify-between items-center">
-        <Link to="/" onClick={handleLogoClick}>
+          <Link to="/" onClick={handleLogoClick}>
             <img src={logo} alt="Logo" className="h-12" />
           </Link>
 
@@ -428,10 +436,8 @@ const Header = () => {
                 <div className="relative group" key={i}>
                   <a href={`#${link.id}`} className="hover:text-blue-400">{link.title}</a>
                   <div className="grid grid-cols-4 absolute items-center top-full left-1/2 -translate-x-1/2 mt-8 bg-[#0d1d34]/50 backdrop-blur-md rounded shadow-lg min-w-[800px] min-h-[300px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-
-
                     {link.subItems.map((sub, idx) => {
-                      const Icon = iconMap[sub.label] || FaCogs; // Default icon if not mapped
+                      const Icon = iconMap[sub.label] || FaCogs;
                       return (
                         <a
                           key={idx}
@@ -443,11 +449,24 @@ const Header = () => {
                         </a>
                       );
                     })}
-
                   </div>
                 </div>
+              ) : link.path ? (
+                <Link 
+                  key={i} 
+                  to={link.path}
+                  className="hover:text-blue-400"
+                >
+                  {link.title}
+                </Link>
               ) : (
-                <a key={i} href={`#${link.id}`} className="hover:text-blue-400">{link.title}</a>
+                <a 
+                  key={i} 
+                  href={`#${link.id}`} 
+                  className="hover:text-blue-400"
+                >
+                  {link.title}
+                </a>
               )
             ))}
           </div>
@@ -495,6 +514,14 @@ const Header = () => {
                       </div>
                     )}
                   </>
+                ) : link.path ? (
+                  <Link
+                    to={link.path}
+                    className="block py-2 hover:text-blue-400"
+                    onClick={toggleMobileMenu}
+                  >
+                    {link.title}
+                  </Link>
                 ) : (
                   <a
                     href={`#${link.id}`}
@@ -510,7 +537,6 @@ const Header = () => {
             </button>
           </div>
         )}
-
       </div>
     </header>
   );

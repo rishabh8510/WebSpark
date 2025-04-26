@@ -22,7 +22,7 @@ export default function PageFirst() {
                     <div className="w-full lg:w-1/2 flex justify-center order-1 lg:order-2">
                         <div className="w-full max-w-[500px] sm:max-w-[600px]">
                             <img
-                                src="/m.png"
+                                src="/mainbg.png"
                                 alt="Dashboard preview on laptop"
                                 className="w-full h-auto rounded-xl shadow-2xl"
                             />

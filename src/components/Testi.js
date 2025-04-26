@@ -39,7 +39,7 @@ const testimonials = [
         message: "Great job! I would definitely hire him again.",
         name: "Cavin S.",
         country:"Rockville, United States",
-        avatar: "/Us.jpg",
+        avatar: "/Us1.jpg",
       },
       {
         message: "Very great Job.Reactive and professional",
@@ -51,7 +51,7 @@ const testimonials = [
         message: "Very fast, prompt response and great follow up. thumbs up!",
         name: "Haidhir R.",
         country:"Singapore, Singapore",
-        avatar: "/Singa.jpg",
+        avatar: "/Singa1.jpg",
       },
       {
         message: "I couldnt recommend this guy enough. Awesome guy to work with who kept in touch the whole time.",

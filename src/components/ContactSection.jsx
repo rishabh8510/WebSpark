@@ -7,8 +7,8 @@ import logo from "../assets/logo.png";
 
 const ContactSection = () => {
   return (
-    <div className="bg-[#010101] text-white py-12 px-4 md:px-20">
-      <div className="max-w-full mx-auto">
+    <div className="bg-[#010101] text-white py-12 px-4 md:px-20 mt-[-150px] lg:mt-[-100px]">
+      <div className="max-w-full mx-auto mb-[-50px]">
         <motion.div
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: 50 }}
@@ -72,8 +72,8 @@ const ContactSection = () => {
               />
               <h3 className="text-xl font-medium border-t border-white pt-2">USA</h3>
               <p className="text-sm">5101 Santa Monica Blvd Ste 8  1304,
-Los Angeles, CA 90029,
-United States</p>
+                Los Angeles, CA 90029,
+                United States</p>
             </motion.div>
 
             {/* Canada */}

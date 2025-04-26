@@ -9,6 +9,8 @@ import PageSecond from './components/PageSecond';
 import PageThird from "./components/PageThird";
 import PageFourth from "./components/PageFourth";
 import PageFive from "./components/PageFive";
+import ContactUs from './components/ContactUs'; 
+import Career from './components/Career';
 
 export const App = () => {
   return (
@@ -22,6 +24,8 @@ export const App = () => {
           <Route path="/solution/ecommerce" element={<PageThird />} />
           <Route path="/solution/warehouse" element={<PageFive />} />
           <Route path="/solution/edtech" element={<PageFourth/>} />
+          <Route path="/ContactUs" element={<ContactUs/>} /> 
+          <Route path="/Career" element={<Career/>} /> 
         </Routes>
       </main>
       <Footer />

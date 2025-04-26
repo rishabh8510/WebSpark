@@ -20,17 +20,17 @@ export default function TestimonialsGrid() {
             .marquee-container {
               display: flex;
               width: max-content;
-              animation: marquee 30s linear infinite;
+              animation: marquee 50s linear infinite;
             }
             .marquee-container-reverse {
               display: flex;
               width: max-content;
-              animation: marquee-reverse 30s linear infinite;
+              animation: marquee-reverse 50s linear infinite;
             }
             .testimonial-card {
-              height: 250px;
+              height: 220px;
               min-width: 300px;
-              width: 350px;
+              width: 400px;
               display: flex;
               flex-direction: column;
               flex-shrink: 0;
@@ -52,9 +52,9 @@ export default function TestimonialsGrid() {
               key={`top-${index}`}
               className="mx-3 bg-[#13132a] text-white p-6 rounded-2xl shadow-lg testimonial-card"
             >
-              <div className="text-3xl mb-2 ">
+              {/* <div className="text-3xl mb-2 ">
                 <RiDoubleQuotesL />
-              </div>
+              </div> */}
               <div className="testimonial-content">
                 <p className="text-sm leading-relaxed text-gray-100 testimonial-text">
                   {testimonial.message}
@@ -77,16 +77,13 @@ export default function TestimonialsGrid() {
       </div>
 
       {/* Bottom Marquee */}
-      <div className="relative mt-[-80px] h-[320px] overflow-hidden">
+      <div className="relative mt-[-120px] h-[320px] overflow-hidden hidden md:block">
         <div className="marquee-container-reverse">
           {[...testimonials, ...testimonials].map((testimonial, index) => (
             <div
               key={`bottom-${index}`}
               className="mx-3 bg-[#13132a] text-white p-6 rounded-2xl shadow-lg testimonial-card"
             >
-              <div className="text-3xl mb-2 ">
-                <RiDoubleQuotesL />
-              </div>
               <div className="testimonial-content">
                 <p className="text-sm leading-relaxed text-gray-100 testimonial-text">
                   {testimonial.message}

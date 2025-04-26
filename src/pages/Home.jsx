@@ -807,7 +807,7 @@ const Home = () => {
               {[...teamMembers, ...teamMembers].map((member, index) => (
                 <div
                   key={index}
-                  className="min-w-[200px] sm:min-w-[280px] rounded-xl overflow-hidden shadow-md relative h-[270px] bg-cover bg-center"
+                  className="min-w-[200px] sm:min-w-[220px] rounded-xl overflow-hidden shadow-md relative h-[270px] bg-cover bg-center"
                   style={{ backgroundImage: `url(${member.image})` }}
                 >
                   <div className="relative z-10 h-full flex flex-col justify-end bg-gradient-to-t from-black/60 via-black/30 to-transparent p-4">
