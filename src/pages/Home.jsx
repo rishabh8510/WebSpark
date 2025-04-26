@@ -285,34 +285,34 @@ const Home = () => {
 
             {/* Headline */}
             <div className="mb-4 md:mb-6">
-              <motion.h1
-                initial={{ x: -100, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: false, amount: 0.3 }}
-                className="text-3xl sm:text-5xl md:text-6xl text-white leading-tight"
-              >
-                We Build AI Software & Apps
-              </motion.h1>
-              <motion.h1
-                initial={{ x: 100, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                viewport={{ once: false, amount: 0.3 }}
-                className="text-3xl sm:text-5xl md:text-6xl text-white leading-tight"
-              >
-                to Simplify Your Daily
-              </motion.h1>
-              <motion.h1
-                initial={{ x: -100, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                viewport={{ once: false, amount: 0.3 }}
-                className="text-3xl sm:text-5xl md:text-6xl text-white leading-tight"
-              >
-                Hustle and Business
-              </motion.h1>
-            </div>
+  <motion.h1
+    initial={{ x: -100, opacity: 0 }}
+    whileInView={{ x: 0, opacity: 1 }}
+    transition={{ duration: 0.8 }}
+    viewport={{ once: false, amount: 0.3 }}
+    className="text-2xl xs:text-3xl sm:text-5xl md:text-6xl text-white leading-tight whitespace-nowrap"
+  >
+    We Build AI Software & Apps
+  </motion.h1>
+  <motion.h1
+    initial={{ x: 100, opacity: 0 }}
+    whileInView={{ x: 0, opacity: 1 }}
+    transition={{ duration: 0.8, delay: 0.2 }}
+    viewport={{ once: false, amount: 0.3 }}
+    className="text-2xl xs:text-3xl sm:text-5xl md:text-6xl text-white leading-tight"
+  >
+    to Simplify Your Daily
+  </motion.h1>
+  <motion.h1
+    initial={{ x: -100, opacity: 0 }}
+    whileInView={{ x: 0, opacity: 1 }}
+    transition={{ duration: 0.8, delay: 0.4 }}
+    viewport={{ once: false, amount: 0.3 }}
+    className="text-2xl xs:text-3xl sm:text-5xl md:text-6xl text-white leading-tight"
+  >
+    Hustle and Business
+  </motion.h1>
+</div>
 
             {/* Description */}
             <motion.p
@@ -320,7 +320,7 @@ const Home = () => {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.6 }}
               viewport={{ once: false, amount: 0.3 }}
-              className="text-gray-400 mt-4 max-w-2xl mx-auto text-sm sm:text-sm md:text-lg font-light px-2 sm:px-4 lg:text-sm"
+              className="text-gray-400 mt-4 max-w-2xl mx-auto text-xs sm:text-sm md:text-lg font-light px-2 sm:px-4 lg:text-sm"
             >
               Bluewebspark Technologies: Pioneering IT Software, AI, and Business
               <br className="hidden sm:block" />
@@ -388,12 +388,12 @@ const Home = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
                   viewport={{ once: false, amount: 0.3 }}
-                  className="absolute bottom-0 left-0 right-0 bg-[#1A2C4E]/50 backdrop-blur-md p-3"
+                  className="absolute bottom-0 left-0 right-0 bg-[#1A2C4E]/50 backdrop-blur-md p-1 md:p-3"
                 >
                   <h3 className="text-white text-lg font-semibold">
                     Manish Shukla
                   </h3>
-                  <p className="text-white text-sm">Co-Founder & Director</p>
+                  <p className="text-white text-[12px] sm:text-sm">Co-Founder & Director</p>
                 </motion.div>
               </motion.div>
 
@@ -414,12 +414,12 @@ const Home = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.3 }}
                   viewport={{ once: false, amount: 0.3 }}
-                  className="absolute bottom-0 left-0 right-0 bg-[#1A2C4E]/50 backdrop-blur-md p-3"
+                  className="absolute bottom-0 left-0 right-0 bg-[#1A2C4E]/50 backdrop-blur-md p-1 md:p-3"
                 >
                   <h3 className="text-white text-lg font-semibold">
                     Shekhar Shukla
                   </h3>
-                  <p className="text-white text-sm">Co-Founder & Director</p>
+                  <p className="text-white text-[12px] sm:text-sm">Co-Founder & Director</p>
                 </motion.div>
               </motion.div>
             </div>

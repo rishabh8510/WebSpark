@@ -82,7 +82,7 @@ const SolutionCard = ({ title, description, img, id }) => {
                 </div>
                 <button
                     onClick={handleClick}
-                    className="px-5 py-2 border border-blue-500 text-blue-500 text-sm rounded hover:bg-gradient-to-r from-[#007AFF] to-[#7AC8FF] hover:text-white transition"
+                    className="w-full md:w-auto px-5 py-2 border border-blue-500 text-blue-500 text-sm rounded hover:bg-gradient-to-r from-[#007AFF] to-[#7AC8FF] hover:text-white transition"
                 >
                     View
                 </button>

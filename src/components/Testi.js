@@ -9,7 +9,7 @@ const testimonials = [
         message: "Very responsive and quick to communicate. Recommended for their professionalism and ease of communication.Thank you Manish",
         name: "Abdullah A.",
         country:"Riyadh, Saudi Arabia",
-        avatar: "/ceo.jpg",
+        avatar: "/Sa.jpg",
       },
       {
         message: "good communication and did everything like I wanted, highly recommended.",
