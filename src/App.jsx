@@ -11,6 +11,7 @@ import PageFourth from "./components/PageFourth";
 import PageFive from "./components/PageFive";
 import ContactUs from './components/ContactUs'; 
 import Career from './components/Career';
+import Apply from './components/Apply';
 
 export const App = () => {
   return (
@@ -26,6 +27,7 @@ export const App = () => {
           <Route path="/solution/edtech" element={<PageFourth/>} />
           <Route path="/ContactUs" element={<ContactUs/>} /> 
           <Route path="/Career" element={<Career/>} /> 
+          <Route path="/apply" element={<Apply />} />
         </Routes>
       </main>
       <Footer />

@@ -75,8 +75,8 @@ const ContactUs = () => {
             </section>
 
             {/* Global Presence Section */}
-            <section className="max-w-full mx-auto mb-[-80px]">
-                <div
+            <section className="max-w-full mx-auto mb-[-60px]">
+                <motion.div
                     whileInView={{ opacity: 1, y: 0 }}
                     initial={{ opacity: 0, y: 50 }}
                     transition={{ duration: 0.8 }}
@@ -84,7 +84,7 @@ const ContactUs = () => {
                     className="bg-[linear-gradient(229deg,_rgba(0,0,0,1)_0%,_rgba(0,102,255,1)_53%,_rgba(0,0,0,1)_100%)] rounded-xl p-8 mb-16 shadow-lg max-w-[1250px] mx-auto"
                 >
                     <div className="flex justify-between items-center mb-8">
-                        <h2
+                        <motion.h2
                             whileInView={{ opacity: 1, x: 0 }}
                             initial={{ opacity: 0, x: -30 }}
                             transition={{ duration: 0.6 }}
@@ -92,8 +92,8 @@ const ContactUs = () => {
                             className="text-3xl font-semibold"
                         >
                             Our Global Presence
-                        </h2>
-                        <img
+                        </motion.h2>
+                        <motion.img
                             src={logo}
                             alt="Blueweb Spark Technologies"
                             className="w-40 h-10"
@@ -106,14 +106,14 @@ const ContactUs = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-20 text-center">
                         {/* India */}
-                        <div
+                        <motion.div
                             className="space-y-4"
                             whileInView={{ opacity: 1, scale: 1 }}
                             initial={{ opacity: 0, scale: 0.8 }}
                             transition={{ duration: 0.6, delay: 0.2 }}
                             viewport={{ once: false, amount: 0.3 }}
                         >
-                            <img
+                            <motion.img
                                 src={indiaIcon}
                                 alt="India"
                                 className="mx-auto h-16"
@@ -121,17 +121,17 @@ const ContactUs = () => {
                             />
                             <h3 className="text-xl font-medium border-t border-white pt-2">INDIA</h3>
                             <p className="text-sm">Office No 408 4th floor Apollo Premier Building Vijay Nagar, Indore (452010)</p>
-                        </div>
+                        </motion.div>
 
                         {/* USA */}
-                        <div
+                        <motion.div
                             className="space-y-4"
                             whileInView={{ opacity: 1, scale: 1 }}
                             initial={{ opacity: 0, scale: 0.8 }}
                             transition={{ duration: 0.6, delay: 0.4 }}
                             viewport={{ once: false, amount: 0.3 }}
                         >
-                            <img
+                            <motion.img
                                 src={usaIcon}
                                 alt="USA"
                                 className="mx-auto h-16"
@@ -141,17 +141,17 @@ const ContactUs = () => {
                             <p className="text-sm">5101 Santa Monica Blvd Ste 8  1304,
                                 Los Angeles, CA 90029,
                                 United States</p>
-                        </div>
+                        </motion.div>
 
                         {/* Canada */}
-                        <div
+                        <motion.div
                             className="space-y-4"
                             whileInView={{ opacity: 1, scale: 1 }}
                             initial={{ opacity: 0, scale: 0.8 }}
                             transition={{ duration: 0.6, delay: 0.6 }}
                             viewport={{ once: false, amount: 0.3 }}
                         >
-                            <img
+                            <motion.img
                                 src={canadaIcon}
                                 alt="Canada"
                                 className="mx-auto h-16"
@@ -159,9 +159,9 @@ const ContactUs = () => {
                             />
                             <h3 className="text-xl font-medium border-t border-white pt-2">CANADA</h3>
                             <p className="text-sm">120 Pembina Rd 140, Sherwood Park, AB T8H 0M2, Canada</p>
-                        </div>
+                        </motion.div>
                     </div>
-                </div>
+                </motion.div>
             </section>
         </div>
     );

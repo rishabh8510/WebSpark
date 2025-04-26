@@ -40,11 +40,6 @@ const teamMembers = [
       image: "/person.avif",
     },
     {
-      name: "Vishal Prajapati",
-      role: "UI/UX Designer",
-      image: "/person.avif",
-    },
-    {
       name: "Noah James",
       role: "UI/UX Designer",
       image: "/Demo.jpg",
