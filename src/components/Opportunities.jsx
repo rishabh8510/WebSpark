@@ -81,58 +81,55 @@ const Opportunities = () => {
   };
 
   return (
-    <section className="py-12 bg-[#000a16]">
-      <div>
-        <h2 className="text-4xl font-semibold text-center mb-10 text-white mt-10">
-          Opportunities
-        </h2>
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
-          {opportunities.map((opportunity) => (
-            <div
-              key={opportunity.id}
-              className="w-[410px] border rounded-2xl shadow-md p-6 flex flex-col justify-between hover:shadow-lg transition border-gray-400"
-            >
-              <div>
-                <h3 className="text-2xl font-semibold text-cyan-600 mb-4">
-                  {opportunity.title}
-                </h3>
-                <p className="mb-6 text-white">{opportunity.description}</p>
-                <div className="text-gray-600 space-y-2 flex justify-between">
-                  <div>
-                    <p>
-                      <span className="font-semibold text-white">Join duration:</span>{" "}
-                      <span className="text-gray-400">{opportunity.joinDuration}</span>
-                    </p>
-                    <p>
-                      <span className="font-semibold text-white">Location:</span>{" "}
-                      <span className="text-gray-400">{opportunity.location}</span>
-                    </p>
-                  </div>
-                  <div>
-                    <p>
-                      <span className="font-semibold text-white">Openings:</span>{" "}
-                      <span className="text-gray-400">{opportunity.openings}</span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="flex justify-between">
-                <p className="text-white mt-6">
-                  <span className="font-semibold text-white">Experience:</span>
-                  <span className="text-gray-400"> {opportunity.experience}</span>
-                </p>
-                <button
-                  onClick={() => handleApply(opportunity)}
-                  className="mt-6 self-start bg-white border border-cyan-500 text-cyan-500 px-6 py-1 rounded-full hover:bg-cyan-500 hover:text-white transition"
-                >
-                  Apply Now
-                </button>
-              </div>
+<section className="py-12 bg-[#000a16]">
+  <div>
+    <h2 className="text-4xl font-semibold text-center mb-10 text-white mt-10">
+      Opportunities
+    </h2>
+    <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-4">
+      {opportunities.map((opportunity) => (
+        <div
+          key={opportunity.id}
+          className="border rounded-2xl shadow-md p-6 flex flex-col justify-between hover:shadow-lg transition border-gray-400 bg-[#00111f]"
+        >
+          <div>
+            <h3 className="text-2xl font-semibold bg-gradient-to-r from-[#007AFF] to-[#7AC8FF] bg-clip-text text-transparent mb-4">
+              {opportunity.title}
+            </h3>
+            <p className="mb-6 text-white">{opportunity.description}</p>
+            <div className="text-gray-600 space-y-2">
+              <p>
+                <span className="font-semibold text-white">Join duration:</span>{" "}
+                <span className="text-gray-400">{opportunity.joinDuration}</span>
+              </p>
+              <p>
+                <span className="font-semibold text-white">Location:</span>{" "}
+                <span className="text-gray-400">{opportunity.location}</span>
+              </p>
+              <p>
+                <span className="font-semibold text-white">Openings:</span>{" "}
+                <span className="text-gray-400">{opportunity.openings}</span>
+              </p>
             </div>
-          ))}
+          </div>
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mt-6">
+            <p className="text-white">
+              <span className="font-semibold text-white">Experience:</span>
+              <span className="text-gray-400"> {opportunity.experience}</span>
+            </p>
+            <button
+              onClick={() => handleApply(opportunity)}
+              className="mt-4 sm:mt-0 bg-white border border-cyan-500 text-blue-500 px-6 py-2 rounded-full hover:bg-gradient-to-r from-[#007AFF] to-[#7AC8FF] hover:text-white transition duration-300"
+            >
+              Apply Now
+            </button>
+          </div>
         </div>
-      </div>
-    </section>
+      ))}
+    </div>
+  </div>
+</section>
+
   );
 };
 

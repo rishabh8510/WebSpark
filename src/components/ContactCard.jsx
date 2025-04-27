@@ -9,7 +9,7 @@ export default function ContactSection() {
               build something great together.
             </h2>
             <p className="text-gray-400 text-sm leading-relaxed max-w-xl text-justify">
-            Looking to start a project or need more details about our services? Complete the form below, and our team will reach out to you soon. At Blueswepspark, we’re committed to listening, collaborating, and bringing your digital ideas to life — whether you're starting from scratch or enhancing your existing systems. We’re here to help every step of the way.
+            Looking to start a project or need more details about our services? Complete the form, and our team will reach out to you soon. At Blueswepspark, we’re committed to listening, collaborating, and bringing your digital ideas to life — whether you're starting from scratch or enhancing your existing systems. We’re here to help every step of the way.
             </p>
           </div>
   
