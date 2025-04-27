@@ -64,7 +64,7 @@ const Apply = () => {
                         <h2 className="text-xl md:text-2xl font-semibold mb-4 bg-gradient-to-r from-[#007AFF] to-[#7AC8FF] bg-clip-text text-transparent">
                             What are the key skills required for this job?
                         </h2>
-                        <ul className="list-disc list-inside space-y-2 text-gray-400">
+                        <ul className="list-disc space-y-2 text-gray-400">
                             {opportunity.skills?.map((skill, index) => (
                                 <li key={index}>{skill}</li>
                             ))}
