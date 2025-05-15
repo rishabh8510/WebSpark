@@ -41,7 +41,7 @@ export default function ContactCard() {
         Let’s build something great together.
       </h2>
       <p className="text-gray-400 text-sm  leading-relaxed">
-        Looking to start a project or need more details about our services? Complete the form, and our team will reach out to you soon. At Blueswebspark, we're committed to listening, collaborating, and bringing your digital ideas to life — whether you're starting from scratch or enhancing your existing systems. We're here to help every step of the way.
+        Looking to start a project or need more details about our services? Complete the form, and our team will reach out to you soon. At Bluewebspark, we're committed to listening, collaborating, and bringing your digital ideas to life — whether you're starting from scratch or enhancing your existing systems. We're here to help every step of the way.
       </p>
     </div>
 
