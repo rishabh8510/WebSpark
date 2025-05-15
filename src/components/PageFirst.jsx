@@ -122,7 +122,9 @@ export default function PageFirst() {
             </div>
 
             {/* Contact Section */}
-            <ContactCard />
+            <div className="pb-10">
+                <ContactCard />
+            </div>
         </div>
     );
 }

@@ -1,23 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Apply = () => {
-
     useEffect(() => {
-        // Scroll to top when the component mounts
         window.scrollTo(0, 0);
     }, []);
 
     const location = useLocation();
-    const navigate = useNavigate();  // Initialize the navigate function
+    const navigate = useNavigate();
     const opportunity = location.state || {};
 
-    // State to manage resume upload or selection
     const [selectedResume, setSelectedResume] = useState(null);
     const [uploadedResume, setUploadedResume] = useState(null);
-    const [modalVisible, setModalVisible] = useState(false);  // Modal visibility state
+    const [modalVisible, setModalVisible] = useState(false);
 
-    // Dummy existing resumes list (In real app, fetch from server)
     const existingResumes = [
         { id: 1, name: "Resume_Jan2025.pdf" },
         { id: 2, name: "Resume_Latest.pdf" },
@@ -26,25 +23,51 @@ const Apply = () => {
 
     const handleResumeUpload = (e) => {
         setUploadedResume(e.target.files[0]);
-        setSelectedResume(null); // clear selected if uploading new
+        setSelectedResume(null);
     };
 
     const handleResumeSelect = (resume) => {
         setSelectedResume(resume);
-        setUploadedResume(null); // clear upload if selecting existing
+        setUploadedResume(null);
     };
 
-    // Handle form submit
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Show the modal after successful submission
-        setModalVisible(true);
+
+        const formData = new FormData(e.target);
+
+        if (!uploadedResume && !selectedResume) {
+            alert("Please upload or select a resume before submitting.");
+            return;
+        }
+
+        const data = {
+            jobId: opportunity._id,
+            firstName: formData.get("firstName"),
+            lastName: formData.get("lastName"),
+            email: formData.get("email"),
+            phone: formData.get("phone"),
+            address: formData.get("address"),
+            city: formData.get("city"),
+            state: formData.get("state"),
+            skills: formData.get("skills")?.split(",").map((skill) => skill.trim()),
+            experience: formData.get("experience"),
+            resume: uploadedResume ? uploadedResume.name : selectedResume.name,
+        };
+
+        try {
+            await axios.post("http://localhost:5000/apply", data);
+            console.log("Form Submitted Successfully");
+            setModalVisible(true);
+        } catch (error) {
+            console.error("Error submitting form:", error);
+            alert("There was an error submitting the form.");
+        }
     };
 
-    // Close modal and navigate to career page
     const handleCloseModal = () => {
-        setModalVisible(false); // Close the modal
-        navigate('/career');  // Redirect to career page
+        setModalVisible(false);
+        navigate("/career");
     };
 
     return (
@@ -58,7 +81,8 @@ const Apply = () => {
                         </h1>
                         <p className="text-gray-400 mb-6">{opportunity.description}</p>
                         <p className="font-semibold mb-6 text-gray-700">
-                            <span className="text-white">Experience:</span> <span className="text-gray-400">{opportunity.experience}</span>
+                            <span className="text-white">Experience:</span>{" "}
+                            <span className="text-gray-400">{opportunity.experience}</span>
                         </p>
 
                         <h2 className="text-xl md:text-2xl font-semibold mb-4 bg-gradient-to-r from-[#007AFF] to-[#7AC8FF] bg-clip-text text-transparent">
@@ -78,23 +102,23 @@ const Apply = () => {
                         </h2>
                         <form className="space-y-4" onSubmit={handleSubmit}>
                             <div className="flex flex-col sm:flex-row gap-4">
-                                <input type="text" placeholder="First Name" required className="w-full sm:w-1/2 text-white border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 pb-2" />
-                                <input type="text" placeholder="Last Name" required className="w-full sm:w-1/2 text-white border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 pb-2" />
+                                <input type="text" name="firstName" placeholder="First Name" required className="w-full sm:w-1/2 text-white border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 pb-2" />
+                                <input type="text" name="lastName" placeholder="Last Name" required className="w-full sm:w-1/2 text-white border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 pb-2" />
                             </div>
 
                             <div className="flex flex-col sm:flex-row gap-4">
-                                <input type="email" placeholder="Email address" required className="w-full sm:w-1/2 text-white border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 pb-2" />
-                                <input type="text" placeholder="Phone Number" required className="w-full sm:w-1/2 text-white border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 pb-2" />
+                                <input type="email" name="email" placeholder="Email address" required className="w-full sm:w-1/2 text-white border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 pb-2" />
+                                <input type="text" name="phone" placeholder="Phone Number" required className="w-full sm:w-1/2 text-white border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 pb-2" />
                             </div>
 
                             <div className="flex flex-col sm:flex-row gap-4">
-                                <input type="text" placeholder="State" required className="w-full sm:w-1/2 text-white border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 pb-2" />
-                                <input type="text" placeholder="City" required className="w-full sm:w-1/2 text-white border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 pb-2" />
+                                <input type="text" name="state" placeholder="State" required className="w-full sm:w-1/2 text-white border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 pb-2" />
+                                <input type="text" name="city" placeholder="City" required className="w-full sm:w-1/2 text-white border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 pb-2" />
                             </div>
 
                             <div className="flex flex-col sm:flex-row gap-4">
-                                <input type="text" placeholder="Skills" required className="w-full sm:w-1/2 text-white border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 pb-2" />
-                                <input type="text" placeholder="Experience" required className="w-full sm:w-1/2 text-white border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 pb-2" />
+                                <input type="text" name="skills" placeholder="Skills" required className="w-full sm:w-1/2 text-white border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 pb-2" />
+                                <input type="text" name="experience" placeholder="Experience" required className="w-full sm:w-1/2 text-white border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 pb-2" />
                             </div>
 
                             {/* Resume Upload */}
@@ -104,7 +128,7 @@ const Apply = () => {
                                     <input
                                         type="file"
                                         accept="application/pdf"
-                                        required
+                                        name="resume"
                                         className="hidden"
                                         onChange={handleResumeUpload}
                                     />
@@ -114,7 +138,7 @@ const Apply = () => {
 
                             {/* Address */}
                             <div>
-                                <input type="text" placeholder="Address" required className="w-full text-white border-b-2 border-gray-300 focus:outline-none focus:border-cyan-500 pb-2" />
+                                <input type="text" name="address" placeholder="Address" required className="w-full text-white border-b-2 border-gray-300 focus:outline-none focus:border-cyan-500 pb-2" />
                             </div>
 
                             {/* Submit Button */}
@@ -142,7 +166,6 @@ const Apply = () => {
                 </div>
             )}
         </section>
-
     );
 };
 

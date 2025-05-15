@@ -4,6 +4,7 @@ import indiaIcon from "../assets/india.png";
 import usaIcon from "../assets/usa.png";
 import canadaIcon from "../assets/canada.png";
 import logo from "../assets/logo.png";
+import ContactCard from "./ContactCard";
 
 const ContactUs = () => {
     return (
@@ -17,10 +18,10 @@ const ContactUs = () => {
             </div>
 
             {/* Contact Form Section */}
-            <section className="max-w-7xl mx-auto bg-gradient-to-r from-[#0F1B3D] to-[#0C0B1F] rounded-xl border border-gray-700 overflow-hidden mb-20">
+            {/* <section className="max-w-7xl mx-auto bg-gradient-to-r from-[#0F1B3D] to-[#0C0B1F] rounded-xl border border-gray-700 overflow-hidden mb-20">
                 <div className="grid lg:grid-cols-2 gap-8 p-6 md:p-10">
                     {/* Left Text Column */}
-                    <div className="flex flex-col justify-center">
+                    {/* <div className="flex flex-col justify-center">
                         <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold leading-snug mb-6">
                             We'd love to hear from you.<br />
                             Let's build something great together.
@@ -31,7 +32,7 @@ const ContactUs = () => {
                     </div>
 
                     {/* Right Form Column */}
-                    <div className="bg-[#0F1B3D]/50 border border-gray-700 rounded-xl p-6 md:p-8 shadow-lg">
+                    {/* <div className="bg-[#0F1B3D]/50 border border-gray-700 rounded-xl p-6 md:p-8 shadow-lg">
                         <form className="space-y-4">
                             <div className="grid grid-cols-1 gap-4">
                                 <input
@@ -71,8 +72,10 @@ const ContactUs = () => {
                             </button>
                         </form>
                     </div>
-                </div>
-            </section>
+                </div> */} 
+            {/* // </section> */}
+
+            <ContactCard/>
 
             {/* Global Presence Section */}
             <section className="max-w-full mx-auto mb-[-60px]">

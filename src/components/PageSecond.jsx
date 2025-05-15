@@ -122,7 +122,9 @@ export default function PageSecond() {
             </div>
             
             {/* Contact */}
-            <ContactCard />
+                       <div className="pb-10">
+                           <ContactCard />
+                       </div>
         </div>
     );
 }

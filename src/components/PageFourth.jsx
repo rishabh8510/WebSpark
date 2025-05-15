@@ -123,7 +123,9 @@ export default function PageFourth() {
         </section>
       </div>
       {/* Contact */}
-      <ContactCard />
+                 <div className="pb-10">
+                     <ContactCard />
+                 </div>
     </div>
   );
 }

@@ -9,6 +9,9 @@ const SwappingCards = () => {
     '/card/img5.jpg',
     '/card/img6.jpg',
     '/card/img7.jpg',
+    '/card/img8.jpg',
+    '/card/img9.jpg',
+    '/card/img10.jpg',
   ];
 
   const rightImages = [

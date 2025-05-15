@@ -12,6 +12,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.2",
     "@tailwindcss/vite": "^4.1.4",
+    "axios": "^1.9.0",
     "country-flag-icons": "^1.5.18",
     "framer-motion": "^12.7.4",
     "lucide-react": "^0.493.0",
