@@ -8,7 +8,7 @@ import ContactCard from "./ContactCard";
 
 const ContactUs = () => {
     return (
-        <div className="bg-[#010101] text-white pt-28 pb-20 px-4 md:px-8 lg:px-20 min-h-screen">
+        <div className="bg-[#010101] text-white pt-28 pb-15 px-4 md:px-8 lg:px-20 min-h-screen">
             {/* Main Heading Section */}
             <div className="max-w-7xl mx-auto text-center mb-16 mt-10">
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Get In Touch</h1>
@@ -75,7 +75,9 @@ const ContactUs = () => {
                 </div> */} 
             {/* // </section> */}
 
-            <ContactCard/>
+            <div className="pb-15">
+                <ContactCard/>
+            </div>
 
             {/* Global Presence Section */}
             <section className="max-w-full mx-auto mb-[-60px]">
