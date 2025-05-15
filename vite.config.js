@@ -8,8 +8,5 @@ export default defineConfig({
     build: {
     chunkSizeWarningLimit: 1000,
   },
-    "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
-  ],
 })
 
