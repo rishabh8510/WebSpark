@@ -53,7 +53,7 @@ const ContactSection = () => {
                 whileHover={{ scale: 1.1 }}
               />
               <h3 className="text-xl font-medium border-t border-white pt-2">INDIA</h3>
-              <p className="text-sm">Office No 408 4th floor Apollo Premier Building Vijay Nagar, Indore (452010)</p>
+              <p className="text-sm">903, NRK Business Park Scheme No. 54, Vijay Nagar Square Indore, Madhya Pradesh (452011)</p>
             </motion.div>
 
             {/* USA */}
