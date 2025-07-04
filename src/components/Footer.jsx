@@ -44,10 +44,10 @@ export default function Footer() {
       <div className="border-t border-gray-700 py-4 text-sm">
         <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row md:justify-between items-start md:items-center space-y-4 md:space-y-0">
           {/* Contact Info */}
-          <div className="flex flex-col md:flex-row md:space-x-6 space-y-3 md:space-y-0 text-gray-300 w-full md:w-auto">
+          <div className="flex flex-col md:flex-row md:space-x-6 space-y-3 md:space-y-0 text-gray-300 w-full md:w-auto lg:gap-12">
             <div className="flex items-start md:items-center justify-start space-x-2">
               <FaMapMarkerAlt className="text-lg flex-shrink-0" />
-              <span>Office No 408  4th floor Apollo Premier Building Vijay Nagar, Indore (452010)</span>
+              <span>903, NRK Business Park Scheme No. 54, Vijay Nagar Square Indore, <br /> Madhya Pradesh 452011</span>
             </div>
             <div className="flex items-start md:items-center justify-start space-x-2">
               <FaEnvelope className="text-lg flex-shrink-0" />
