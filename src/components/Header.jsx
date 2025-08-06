@@ -416,7 +416,7 @@ const Header = () => {
             </div>
             <div className="flex items-center gap-2">
               <FaPhone className="h-4 w-4" />
-              <a href="tel:+918965029288">+91 8965029288</a>
+              <a href="tel:+918989853069">+91 8989853069</a>
             </div>
           </div>
         </div>
