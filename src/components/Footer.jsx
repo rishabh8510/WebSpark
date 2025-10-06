@@ -44,7 +44,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row md:space-x-6 space-y-3 md:space-y-0 text-gray-300 w-full md:w-auto lg:gap-12">
             <div className="flex items-start md:items-center justify-start space-x-2">
               <FaMapMarkerAlt className="text-lg flex-shrink-0" />
-              <span>Apollo Premier, Office No 411,  4th floor  Vijay Nagar Square,<br /> Vijay Nagar 452010 Madhya Pradesh</span>
+              <span>Apollo Premier, Office No. 411,  4th floor  Vijay Nagar Square,<br /> Vijay Nagar 452010 Madhya Pradesh</span>
             </div>
             <div className="flex items-start md:items-center justify-start space-x-2">
               <FaEnvelope className="text-lg flex-shrink-0" />
