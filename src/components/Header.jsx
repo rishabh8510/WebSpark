@@ -5,7 +5,7 @@ import { FaPhone } from "react-icons/fa6";
 import { HiOutlineDownload, HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 import { US, GB, EU, AU, CA } from 'country-flag-icons/react/3x2';
 import { Link } from 'react-router-dom';
-
+import Ad from "./advertisement/Ad"
 
 
 const handleLogoClick = () => {
@@ -396,9 +396,11 @@ const Header = () => {
   };
 
   return (
+<>
     <header className="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-[#02060c] via-[#0d1d34] to-[#02060c] shadow-md">
 
       {/* Top Header - Hidden below lg (≥1024px) */}
+      <Ad/>
       <div className="hidden lg:block w-full px-4 py-2 border-b border-gray-800/50">
         <div className="max-w-screen-xl mx-auto flex justify-between items-center">
           <div className="flex gap-4 flex-wrap">
@@ -539,6 +541,7 @@ const Header = () => {
         )}
       </div>
     </header>
+</>
   );
 };
 
