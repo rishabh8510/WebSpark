@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 export default function Ad({ 
   message = "Happy Diwali 2025! May the festival of lights fill your home and heart with joy, peace and prosperity.",
-  duration = 7,
+  duration = 9,
   onClose 
 }) {
   const [isVisible, setIsVisible] = useState(true);
