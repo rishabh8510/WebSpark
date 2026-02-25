@@ -474,8 +474,17 @@ const Header = () => {
           </div>
 
           {/* Desktop Brochure Button */}
-          <div className="hidden lg:flex">
+          {/* <div className="hidden lg:flex">
             <button className="bg-[#0066FF] text-white px-5 py-2 rounded text-sm flex items-center hover:bg-gradient-to-r from-[#007AFF] to-[#7AC8FF] transition">
+              Brochure <HiOutlineDownload className="ml-2" />
+            </button>
+          </div> */}
+
+                    <div className="hidden lg:flex">
+            <button
+              onClick={() => window.open("/BluewebSpark.pdf", "_blank")}
+              className="bg-[#0066FF] text-white px-5 py-2 rounded text-sm flex items-center hover:bg-gradient-to-r from-[#007AFF] to-[#7AC8FF] transition"
+            >
               Brochure <HiOutlineDownload className="ml-2" />
             </button>
           </div>
@@ -534,7 +543,10 @@ const Header = () => {
                 )}
               </div>
             ))}
-            <button className="bg-[#0066FF] text-white w-full px-5 py-2 rounded text-sm flex items-center justify-center hover:bg-gradient-to-r from-[#007AFF] to-[#7AC8FF] transition">
+            {/* <button className="bg-[#0066FF] text-white w-full px-5 py-2 rounded text-sm flex items-center justify-center hover:bg-gradient-to-r from-[#007AFF] to-[#7AC8FF] transition">
+              Brochure <HiOutlineDownload className="ml-2" />
+            </button> */}
+                        <button className="bg-[#0066FF] text-white w-full px-5 py-2 rounded text-sm flex items-center justify-center hover:bg-gradient-to-r from-[#007AFF] to-[#7AC8FF] transition">
               Brochure <HiOutlineDownload className="ml-2" />
             </button>
           </div>
