@@ -252,8 +252,7 @@ const mobileMenuLinks = [
       { label: "Computer Vision", href: "#" },
       { label: "IT Outsourcing Services", href: "#" },
       { label: "Machine Learning", href: "#" },
-    ],
-    path: "/"
+    ]
   },
   {
     title: "AI Solution",
