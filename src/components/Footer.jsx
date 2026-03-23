@@ -9,6 +9,7 @@ import {
   FaYoutube
 } from 'react-icons/fa';
 import { SiX } from 'react-icons/si';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -74,7 +75,9 @@ export default function Footer() {
           <p>Copyright © Bluewebspark Technologies Ltd All Rights Reserved.</p>
           <div className="flex space-x-4">
             <a href="#" className="hover:text-blue-400">Terms & Condition</a>
-            <a href="#" className="hover:text-blue-400">Privacy Policy</a>
+            <Link to="/privacy" className="hover:text-blue-400">
+              Privacy Policy
+            </Link>
           </div>
         </div>
       </div>
