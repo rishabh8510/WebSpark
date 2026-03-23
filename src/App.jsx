@@ -14,6 +14,7 @@ import ContactUs from './components/ContactUs'
 import Career from './components/Career'
 import Apply from './components/Apply'
 import PrivacyPolicy from './pages/PrivacyPolicy'
+import TermsAndConditions from './pages/TermsAndCondtions'
 
 export const App = () => {
   return (
@@ -31,6 +32,7 @@ export const App = () => {
           <Route path="/Career" element={<Career />} />
           <Route path="/apply" element={<Apply />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<TermsAndConditions />} />
           <Route path="*" element={<h1 className="text-center mt-10 text-2xl">404 - Page Not Found</h1>} />
         </Routes>
       </main>

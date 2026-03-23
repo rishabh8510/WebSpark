@@ -74,7 +74,9 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between space-y-2 sm:space-y-0">
           <p>Copyright © Bluewebspark Technologies Ltd All Rights Reserved.</p>
           <div className="flex space-x-4">
-            <a href="#" className="hover:text-blue-400">Terms & Condition</a>
+            <Link to="/terms" className="hover:text-blue-400">
+              Terms & Condition
+            </Link>
             <Link to="/privacy" className="hover:text-blue-400">
               Privacy Policy
             </Link>

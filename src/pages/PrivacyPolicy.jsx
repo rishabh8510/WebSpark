@@ -19,7 +19,7 @@ export default function PrivacyPolicy() {
             <div key={section.id}>
               
               {/* Heading */}
-              <h2 className="text-xl md:text-2xl font-semibold text-white mb-3">
+              <h2 className="text-xl md:text-2xl font-semibold text-white mb-3 hover:text-blue-400">
                 {section.id}. {section.heading}
               </h2>
 
