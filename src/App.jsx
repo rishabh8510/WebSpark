@@ -1,4 +1,3 @@
-// App.jsx
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 
@@ -15,12 +14,13 @@ import Career from './components/Career'
 import Apply from './components/Apply'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import TermsAndConditions from './pages/TermsAndCondtions'
-
+import ScrollToTop from './components/ScrollToTop'
 export const App = () => {
   return (
     <>
       <Header />
       <main>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/solution/transport" element={<PageFirst />} />
