@@ -30,11 +30,11 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-end md:space-x-6">
             <p className="font-bold mb-2 md:mb-0">Quick Links</p>
             <ul className="flex flex-wrap justify-start md:justify-end gap-x-4 gap-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-blue-400">About Us</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-blue-400">Our Services</a></li>
-              <li><a href="/blog#/blog" className="text-gray-400 hover:text-blue-400">Our Blogs</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-blue-400">FAQ</a></li>
-              <li><a href="/Contact#/ContactUs" className="text-gray-400 hover:text-blue-400">Contact Us</a></li>
+              <li><a href="/" className="text-gray-400 hover:text-blue-400">About Us</a></li>
+              <li><a href="/" className="text-gray-400 hover:text-blue-400">Our Services</a></li>
+              <li><a href="/" className="text-gray-400 hover:text-blue-400">Our Blogs</a></li>
+              <li><a href="/" className="text-gray-400 hover:text-blue-400">FAQ</a></li>
+              <li><a href="/ContactUs" className="text-gray-400 hover:text-blue-400">Contact Us</a></li>
             </ul>
           </div>
         </div>
@@ -75,7 +75,7 @@ export default function Footer() {
           <p>Copyright © Bluewebspark Technologies Ltd All Rights Reserved.</p>
           <div className="flex space-x-4">
             <Link to="/terms" className="hover:text-blue-400">
-              Terms & Condition
+              Terms & Conditions
             </Link>
             <Link to="/privacy" className="hover:text-blue-400">
               Privacy Policy
