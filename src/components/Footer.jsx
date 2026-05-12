@@ -25,7 +25,7 @@ export default function Footer() {
         </div>
         <div className="md:mt-5">
           <div className='md:ml-40 mb-15'>
-            <p className='text-gray-400'><span className='text-[15px] font-semibold text-white'>Business & Sales Inquiries:</span> +91 8965029288  </p>
+            <p className='text-gray-400'><span className='text-[15px] font-semibold text-white'>Business & Sales Inquiries:</span> 1800 30999 533  </p>
           </div>
           <div className="flex flex-col md:flex-row md:items-center md:justify-end md:space-x-6">
             <p className="font-bold mb-2 md:mb-0">Quick Links</p>
@@ -43,17 +43,17 @@ export default function Footer() {
       <div className="border-t border-gray-700 py-4 text-sm">
         <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row md:justify-between items-start md:items-center space-y-4 md:space-y-0">
           <div className="flex flex-col md:flex-row md:space-x-6 space-y-3 md:space-y-0 text-gray-300 w-full md:w-auto lg:gap-12">
-            <div className="flex items-start md:items-center justify-start space-x-2">
+            {/* <div className="flex items-start md:items-center justify-start space-x-2">
               <FaMapMarkerAlt className="text-lg flex-shrink-0" />
               <span>Apollo Premier, Office No. 411,  4th floor  Vijay Nagar Square,<br /> Vijay Nagar (452010), Madhya Pradesh</span>
-            </div>
+            </div> */}
             <div className="flex items-start md:items-center justify-start space-x-2">
               <FaEnvelope className="text-lg flex-shrink-0" />
               <span>info@bluewebspark.com | hr@bluewebspark.com</span>
             </div>
             <div className="flex items-start md:items-center justify-start space-x-2">
               <FaPhoneAlt className="text-lg flex-shrink-0" />
-              <span>+91 8965029288</span>
+              <span>1800 30999 533</span>
             </div>
           </div>
           <div className="flex items-start md:items-center md:justify-end space-x-4 text-white text-lg">

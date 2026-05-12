@@ -4,7 +4,7 @@ import testimonials from "./Testi";
 
 export default function TestimonialsGrid() {
   return (
-    <div className="bg-[#010101] py-10 px-4 md:px-10">
+    <div className="bg-[#010101] py-20 px-4 md:px-10">
       {/* Top Marquee */}
       <div className="relative mb-10 h-[320px] overflow-hidden">
         <style>

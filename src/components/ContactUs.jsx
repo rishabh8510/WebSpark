@@ -109,9 +109,9 @@ const ContactUs = () => {
                         />
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-20 text-center">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-20 text-center">
                         {/* India */}
-                        <motion.div
+                        {/* <motion.div
                             className="space-y-4"
                             whileInView={{ opacity: 1, scale: 1 }}
                             initial={{ opacity: 0, scale: 0.8 }}
@@ -126,7 +126,7 @@ const ContactUs = () => {
                             />
                             <h3 className="text-xl font-medium border-t border-white pt-2">INDIA</h3>
                             <p className="text-sm">Apollo Premier, Office No. 411,  4th floor  Vijay Nagar Square, Vijay Nagar (452010), Madhya Pradesh</p>
-                        </motion.div>
+                        </motion.div> */}
 
                         {/* USA */}
                         <motion.div

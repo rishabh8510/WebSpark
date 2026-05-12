@@ -285,34 +285,34 @@ const Home = () => {
 
             {/* Headline */}
             <div className="mb-4 md:mb-6">
-  <motion.h1
-    initial={{ x: -100, opacity: 0 }}
-    whileInView={{ x: 0, opacity: 1 }}
-    transition={{ duration: 0.8 }}
-    viewport={{ once: false, amount: 0.3 }}
-    className="text-2xl xs:text-3xl sm:text-5xl md:text-6xl text-white leading-tight whitespace-nowrap"
-  >
-    We Build AI Software & Apps
-  </motion.h1>
-  <motion.h1
-    initial={{ x: 100, opacity: 0 }}
-    whileInView={{ x: 0, opacity: 1 }}
-    transition={{ duration: 0.8, delay: 0.2 }}
-    viewport={{ once: false, amount: 0.3 }}
-    className="text-2xl xs:text-3xl sm:text-5xl md:text-6xl text-white leading-tight"
-  >
-    to Simplify Your Daily
-  </motion.h1>
-  <motion.h1
-    initial={{ x: -100, opacity: 0 }}
-    whileInView={{ x: 0, opacity: 1 }}
-    transition={{ duration: 0.8, delay: 0.4 }}
-    viewport={{ once: false, amount: 0.3 }}
-    className="text-2xl xs:text-3xl sm:text-5xl md:text-6xl text-white leading-tight"
-  >
-    Hustle and Business
-  </motion.h1>
-</div>
+              <motion.h1
+                initial={{ x: -100, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: false, amount: 0.3 }}
+                className="text-2xl xs:text-3xl sm:text-5xl md:text-6xl text-white leading-tight whitespace-nowrap"
+              >
+                We Build AI Software & Apps
+              </motion.h1>
+              <motion.h1
+                initial={{ x: 100, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: false, amount: 0.3 }}
+                className="text-2xl xs:text-3xl sm:text-5xl md:text-6xl text-white leading-tight"
+              >
+                to Simplify Your Daily
+              </motion.h1>
+              <motion.h1
+                initial={{ x: -100, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                viewport={{ once: false, amount: 0.3 }}
+                className="text-2xl xs:text-3xl sm:text-5xl md:text-6xl text-white leading-tight"
+              >
+                Hustle and Business
+              </motion.h1>
+            </div>
 
             {/* Description */}
             <motion.p
@@ -332,9 +332,8 @@ const Home = () => {
 
         {/* =============== Brother's ====================== */}
 
-        <section className="w-full my-10 md:my-20 px-4 bg-[#010101]">
+        {/* <section className="w-full my-10 md:my-20 px-4 bg-[#010101]">
           <div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr] gap-8 md:gap-12">
-            {/* Left Content */}
             <motion.div
               initial={{ x: -100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
@@ -369,9 +368,7 @@ const Home = () => {
               </motion.p>
             </motion.div>
 
-            {/* Right Cards */}
             <div className="w-full flex flex-wrap gap-4 sm:gap-6 justify-center md:justify-start">
-              {/* Manish Card (From Top) */}
               <motion.div
                 initial={{ y: -80, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
@@ -397,7 +394,6 @@ const Home = () => {
                 </motion.div>
               </motion.div>
 
-              {/* Shekhar Card (From Bottom) */}
               <motion.div
                 initial={{ y: 80, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
@@ -424,11 +420,11 @@ const Home = () => {
               </motion.div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* =============== software solution ====================== */}
 
-       <SolutionsSection/>
+        <SolutionsSection />
 
         {/* ================== industry ================= */}
 
@@ -495,7 +491,7 @@ const Home = () => {
         </div>
 
         {/* ==================== Celebration ================== */}
-
+{/* 
         <div className="bg-[#010101] text-white py-10 px-4 md:px-20 min-h-screen">
           <style>{`
         @keyframes marquee {
@@ -542,7 +538,6 @@ const Home = () => {
             </motion.p>
           </div>
 
-          {/* Auto-Marquee Slider Section */}
           <div className="relative overflow-hidden mt-12">
             <div
               className="flex gap-6 whitespace-nowrap"
@@ -567,11 +562,11 @@ const Home = () => {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* ================= Our Partner ============================== */}
 
-        <div className="bg-[#010101] text-white font-sans px-4 sm:px-8 md:px-16 py-8 sm:py-12 mt-[-90px]">
+        <div className="bg-[#010101] text-white font-sans px-4 sm:px-8 md:px-16 py-8 sm:py-12">
           {/* Hero Section */}
           <motion.div
             className="bg-[linear-gradient(229deg,_rgba(0,0,0,1)_0%,_rgba(0,102,255,1)_53%,_rgba(0,0,0,1)_100%)] rounded-xl p-6 sm:p-8 md:p-12 max-w-7xl mx-auto text-center shadow-lg"
@@ -696,9 +691,8 @@ const Home = () => {
 
         {/* ============== journey section ======================= */}
 
-        <section className="bg-[#010101] text-white py-16 px-4 md:px-10">
+        {/* <section className="bg-[#010101] text-white py-16 px-4 md:px-10">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            {/* Span Animation - from top */}
             <motion.span
               initial={{ opacity: 0, y: -30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -711,7 +705,6 @@ const Home = () => {
               </span>
             </motion.span>
 
-            {/* H2 Animation - fade in from center */}
             <motion.h2
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -725,7 +718,6 @@ const Home = () => {
               </span>
             </motion.h2>
 
-            {/* P Animation - from bottom */}
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -739,15 +731,14 @@ const Home = () => {
             </motion.p>
           </div>
 
-          {/* Cards Row */}
           <BentoGridCard />
 
 
-        </section>
+        </section> */}
 
         {/* ================ TeamShowCase ========================== */}
 
-        <div className="bg-[#010101] text-white py-16 px-4">
+        {/* <div className="bg-[#010101] text-white py-16 px-4">
           <style>{`
         @keyframes marquee {
           0% { transform: translateX(0%); }
@@ -756,7 +747,6 @@ const Home = () => {
       `}</style>
 
           <div className="max-w-7xl mx-auto text-center">
-            {/* Span from right */}
             <motion.span
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -769,7 +759,6 @@ const Home = () => {
               </span>
             </motion.span>
 
-            {/* H2 from left */}
             <motion.h2
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -783,7 +772,6 @@ const Home = () => {
               </span>
             </motion.h2>
 
-            {/* P from bottom */}
             <motion.p
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -795,7 +783,6 @@ const Home = () => {
             </motion.p>
           </div>
 
-          {/* Marquee Slider (unchanged) */}
           <div className="relative overflow-hidden mt-12">
             <div
               className="flex gap-6 whitespace-nowrap"
@@ -820,7 +807,7 @@ const Home = () => {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* ================ AssociatePartner ========================= */}
         <div className="bg-[#010101] text-white py-16 px-4 sm:px-6 lg:px-12">
@@ -897,8 +884,8 @@ const Home = () => {
             </div>
           </div>
         </div>
-       <TestimonialsGrid/>
-       <ContactSection/>
+        <TestimonialsGrid />
+        <ContactSection />
 
       </div>
     </>
